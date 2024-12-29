@@ -1,5 +1,5 @@
-{ 
-  "homepage": "https://pradeep-08.github.io/suji_production_ui",
+{
+  "homepage": "https://pradeep-08.github.io/suji_production_ui/",
   "name": "vite-react-typescript-starter",
   "private": true,
   "version": "0.0.0",
@@ -7,7 +7,7 @@
   "scripts": {
     "start": "vite",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
