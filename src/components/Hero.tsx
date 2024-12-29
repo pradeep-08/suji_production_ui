@@ -1,4 +1,5 @@
-import { ArrowRight } from "lucide-react";
+
+import { ArrowRight,Mail } from "lucide-react";
 import hero from "../img/hero/hero.jpeg";
 
 export default function Hero() {
@@ -22,8 +23,10 @@ export default function Hero() {
             Professional makeup, traditional mehandi designs, and elegant saree
             draping services for all your special occasions.
           </p>
-          <button className="bg-pink-600 text-white px-8 py-3 rounded-md hover:bg-pink-700 transition flex items-center space-x-5">
-            <span>Book Appointment</span>
+          <button className="bg-pink-600 text-white px-8 py-3 rounded-md hover:bg-pink-700 transition flex items-center space-x-4">
+          <Mail className="h-5 w-5 text-white-600 flex-shrink-0" />
+            <span>
+              Book Appointment</span>
             <ArrowRight className="h-5 w-5" />
           </button>
         </div>
