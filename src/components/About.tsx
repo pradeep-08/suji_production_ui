@@ -24,7 +24,7 @@ export default function About() {
                                     occasion. From basic to HD, matte, and dewy makeup, we cater to all needs including engagement,
                                     reception, and pre-wedding looks. Whether it’s party makeup, bridal makeup, or special events like
                                     baby showers and puberty ceremonies, our expert team ensures you look stunning and radiant. Let us
-                                    help you shine on your special day!
+                                    help you shine on your special day !!!
                                 </p>
 
                             </div>
