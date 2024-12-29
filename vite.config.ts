@@ -4,11 +4,8 @@ import react from "@vitejs/plugin-react";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base : "/sujihairandmakeup",
+  base: "/sujihairandmakeup",
   optimizeDeps: {
     exclude: ["lucide-react"],
-  },
-  build: {
-    outDir: "build", // Ensure this matches the folder you want
   },
 });
