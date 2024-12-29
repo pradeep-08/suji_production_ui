@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.icons{
+    padding-top: 10px;
+    font-size: 20px;   
+}
