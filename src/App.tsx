@@ -19,7 +19,12 @@ function App() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p>
             &copy; {new Date().getFullYear()} SujiHairAndMakeup. All rights
-            reserved.
+            reserved.{" "}
+            <li className="list-none">
+              <a href="https://naveen-767.github.io/Portfolio-Naveen/" target="_blank">
+                Contact Developer
+              </a>
+            </li>
           </p>
         </div>
       </footer>
