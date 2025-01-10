@@ -29,7 +29,7 @@ export default function About() {
 
                             </div>
                             <div className="relative">
-                            <img src={about1} className="rounded-xl transition-transform duration-300 transform " alt="Imagem de perfil" />
+                            <img src={about2} className="rounded-xl transition-transform duration-300 transform " alt="Imagem de perfil" />
                             {/* <img src={about2} className="rounded-xl absolute top-0 left-0 opacity-0 transition-opacity duration-300 transform hover:opacity-100" alt="Nova imagem" /> */}
                                 {/* <img className="relative w-full xl:max-w-lg xl:mx-auto 2xl:origin-bottom 2xl:scale-110 rounded-xl hover:b" src={about1}alt="about1" /> */}
                             </div>
