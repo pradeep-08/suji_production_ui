@@ -1,64 +1,66 @@
 import babyshower from "../img/Babyshower/babyshower1.jpeg";
-import floringmaking from "../img/Floringmaking/floring making.jpeg";
-import HD from "../img/HD/HD1.jpg";
-import Hairstyle from "../img/Hairstyle/Hairstyle1.jpg";
-import Meganthi from "../img/Meganthi/meganthi1.jpeg";
-import Messybun from "../img/Messybun/messy bun.jpeg";
-import HD4 from "../img/HD/HD4.jpeg";
-import HD7 from "../img/HD/HD7.jpeg";
-import HD8 from "../img/HD/HD8.jpeg";``
-import sarreDraping from "../img/Sareedraping/Sareedraping3.jpeg";
-import HD12 from "../img/HD/HD12.jpeg";
-import Puberty from "../img/puberty/puberty1.jpeg";
+import newImg11 from "../img/new/11.jpeg";
+import newImg1 from "../img/new/1.jpeg";
+import newImg2 from "../img/new/2.jpeg";
+import newImg3 from "../img/new/3.jpeg";
+import newImg4 from "../img/new/4.jpeg";
+import newImg5 from "../img/new/5.jpeg";
+import newImg6 from "../img/new/6.jpeg";
+import newImg7 from "../img/new/7.jpeg";
+import newImg8 from "../img/new/8.jpeg";
+import newImg9 from "../img/new/9.jpeg";
+import newImg10 from "../img/new/10.jpeg";
+
 const images = [
   {
-    url: [HD8],
-    title: "Basic Makeup",
-  },
-  {
-    url: [HD7],
-    title: "HD Makeup",
-  },
-  {
-    url: [HD4],
-    title: "Bridel Makeup",
-  },
-  {
-    url: [Puberty],
-    title: "Puberty Makeup",
-  },
-  {
-    url: [HD12],
-    title: "Pre Wedding Shoot Makeup",
-  },
-  {
-    url: [sarreDraping],
-    title: "SareeDraping",
-  },
-  {
-    url: [Messybun],
-    title: "Messybun",
-  },
-  {
-    url: [Meganthi],
-    title: "Meganthi",
-  },
-  {
-    url: [Hairstyle],
-    title: "Hairstyle",
-  },
-  {
-    url: [HD],
+    url: [newImg10],
     title: "Air Brush Makeup",
   },
   {
-    url: [babyshower],
-    title: "babyshower",
+    url: [newImg2],
+    title: "Mugurtham Makeup",
   },
   {
-    url: [floringmaking],
-    title: "Floring making",
+    url: [newImg3],
+    title: "Engagement Basic Makeup",
   },
+  {
+    url: [newImg4],
+    title: "Reception Hairstyle",
+  },
+  {
+    url: [newImg5],
+    title: "Saree Draping",
+  },
+  {
+    url: [newImg6],
+    title: "Mugurtham Hairstyle",
+  },
+  {
+    url: [newImg7],
+    title: "Engagement Look",
+  },
+  {
+    url: [newImg8],
+    title: "Pre-Wedding Shoot",
+  },
+  {
+    url: [newImg9],
+    title: "HD Makeup",
+  },
+  {
+    url: [newImg1],
+    title: "Puberty Makeup",
+  },
+  {
+    url: [babyshower],
+    title: "Maternity",
+  },
+  {
+    url: [newImg11],
+    title: "Meganthi",
+  },
+
 ];
 
 export default function Gallery() {
