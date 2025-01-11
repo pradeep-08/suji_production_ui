@@ -1,11 +1,16 @@
 import { Phone, Mail, MapPin } from "lucide-react";
 // import { useRef } from "react";
 import emailjs from "@emailjs/browser";
+import { useEffect } from "react";
+import AOS from 'aos';
 
 export default function Contact() {
-
+  useEffect(() => {
+        AOS.init({ duration: 2000 });
+      }, []);
+    
   return (
-    <div id="contact" className="py-24">
+    <div data-aos="zoom-in-up"  id="contact" className="py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Contact Us</h2>
@@ -21,30 +26,29 @@ export default function Contact() {
               action="https://api.web3forms.com/submit"
               method="POST"
               id="request"
-             
               className="space-y-6"
             >
               <div>
-              <input
-                type="hidden"
-                name="access_key"
-                value="6a320d9d-1efa-45d9-9307-885f2424b1ba"
-              />
-                  <input
-                type="hidden"
-                name="subject"
-                value="New Request from Client ❗⚠️"
-              />
-              <input
-                type="hidden"
-                name="from_name"
-                value="Client Notification ⚠️"
-              />
-                <label className="block text-sm font-medium text-gray-900" >
+                <input
+                  type="hidden"
+                  name="access_key"
+                  value="6a320d9d-1efa-45d9-9307-885f2424b1ba"
+                />
+                <input
+                  type="hidden"
+                  name="subject"
+                  value="New Request from Client ❗⚠️"
+                />
+                <input
+                  type="hidden"
+                  name="from_name"
+                  value="Client Notification ⚠️"
+                />
+                <label className="block text-sm font-medium text-gray-900">
                   Name
                 </label>
                 <input
-                 name="Full Name"
+                  name="Full Name"
                   type="text"
                   // Added name attribute
                   className="mt-1 p-1 block w-full rounded-md border-gray-900 shadow-md focus:border-pink-500 focus:ring-pink-500"
@@ -55,8 +59,8 @@ export default function Contact() {
                   Email
                 </label>
                 <input
-                 id="to"
-                   name="Email"
+                  id="to"
+                  name="Email"
                   type="email"
                   // Added name attribute
                   className="mt-1 p-1 block w-full rounded-md border-gray-900 shadow-md focus:border-pink-500 focus:ring-pink-500"
@@ -69,12 +73,11 @@ export default function Contact() {
                 </label>
                 <input
                   type="tel" // Changed to "tel" for phone number input
-                 // Added name attribute
+                  // Added name attribute
                   pattern="[0-9]{10}" // Added pattern for 10 digit phone number
                   className="mt-1 p-1 block w-full rounded-md border-gray-900 shadow-md focus:border-pink-500 focus:ring-pink-500"
                   name="Phone Number"
                   required
-                 
                 />
               </div>
               <div>
@@ -110,7 +113,6 @@ export default function Contact() {
               <button
                 type="submit"
                 className="w-full bg-pink-600 text-white px-4 py-2 rounded-md hover:bg-pink-700 transition"
-            
               >
                 Book Now
               </button>

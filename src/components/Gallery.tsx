@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import AOS from 'aos';
 import babyshower from "../img/Babyshower/babyshower1.jpeg";
 import newImg11 from "../img/new/11.jpeg";
 import newImg1 from "../img/new/1.jpeg";
@@ -12,58 +14,25 @@ import newImg9 from "../img/new/9.jpeg";
 import newImg10 from "../img/new/10.jpeg";
 
 const images = [
-  {
-    url: [newImg10],
-    title: "Air Brush Makeup",
-  },
-  {
-    url: [newImg2],
-    title: "Mugurtham Makeup",
-  },
-  {
-    url: [newImg3],
-    title: "Engagement Basic Makeup",
-  },
-  {
-    url: [newImg4],
-    title: "Reception Hairstyle",
-  },
-  {
-    url: [newImg5],
-    title: "Saree Draping",
-  },
-  {
-    url: [newImg6],
-    title: "Mugurtham Hairstyle",
-  },
-  {
-    url: [newImg7],
-    title: "Engagement Look",
-  },
-  {
-    url: [newImg8],
-    title: "Pre-Wedding Shoot",
-  },
-  {
-    url: [newImg9],
-    title: "HD Makeup",
-  },
-  {
-    url: [newImg1],
-    title: "Puberty Makeup",
-  },
-  {
-    url: [babyshower],
-    title: "Maternity",
-  },
-  {
-    url: [newImg11],
-    title: "Meganthi",
-  },
-
+  { url: newImg10, title: "Air Brush Makeup" },
+  { url: newImg2, title: "Mugurtham Makeup" },
+  { url: newImg3, title: "Engagement Basic Makeup" },
+  { url: newImg4, title: "Reception Hairstyle" },
+  { url: newImg5, title: "Saree Draping" },
+  { url: newImg6, title: "Mugurtham Hairstyle" },
+  { url: newImg7, title: "Engagement Look" },
+  { url: newImg8, title: "Pre-Wedding Shoot" },
+  { url: newImg9, title: "HD Makeup" },
+  { url: newImg1, title: "Puberty Makeup" },
+  { url: babyshower, title: "Maternity" },
+  { url: newImg11, title: "Meganthi" },
 ];
 
 export default function Gallery() {
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, []);
+
   return (
     <div id="gallery" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -79,6 +48,7 @@ export default function Gallery() {
           {images.map((image, index) => (
             <div
               key={index}
+              data-aos="flip-left"
               className="group relative overflow-hidden rounded-lg"
             >
               <img

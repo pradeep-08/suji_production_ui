@@ -1,12 +1,17 @@
-import about1 from '../img/About/About1.jpeg'
 import about2 from '../img/About/About2.jpeg'
+import { useEffect } from "react";
+import AOS from 'aos';
 
 
 
 
 export default function About() {
+      useEffect(() => {
+          AOS.init({ duration: 2000 });
+        }, []);
     return (
-        <div id="about" className="  pt-24">
+        <div data-aos="slide-left" id="about" className="  pt-24">
+            
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-8 d-grid">
                     <h2 className="text-3xl font-bold text-gray-900 mb-4">About</h2>
@@ -19,7 +24,7 @@ export default function About() {
                                 <h1 className="text-3xl font-bold leading-tight text-black  sm:text-5xl lg:text-3xl">
                                     <br className="block sm:hidden" />Suji Hair and Makeup
                                 </h1>
-                                <p className="max-w-lg mt-3 text-xl leading-relaxed text-gray-600  md:mt-8">
+                                <p  data-aos="fade-down" className="max-w-lg mt-3 text-xl leading-relaxed text-gray-600  md:mt-8">
                                     offers a range of services to enhance your natural beauty for any
                                     occasion. From basic to HD, matte, and dewy makeup, we cater to all needs including engagement,
                                     reception, and pre-wedding looks. Whether it’s party makeup, bridal makeup, or special events like
