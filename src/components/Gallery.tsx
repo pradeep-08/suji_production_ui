@@ -35,7 +35,7 @@ export default function Gallery() {
 
   return (
     <div id="gallery" className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Gallery</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
