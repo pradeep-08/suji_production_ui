@@ -1,19 +1,19 @@
 import { Phone, Mail, MapPin } from "lucide-react";
 // import { useRef } from "react";
-import emailjs from "@emailjs/browser";
+// import emailjs from "@emailjs/browser";
 import { useEffect } from "react";
 import AOS from 'aos';
 
 export default function Contact() {
   useEffect(() => {
-        AOS.init({ duration: 2000 });
-      }, []);
-    
+    AOS.init({ duration: 2000 });
+  }, []);
+
   return (
-    <div data-aos="zoom-in-up"  id="contact" className="py-24">
+    <div data-aos="zoom-in-up" id="contact" className="py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Contact Us</h2>
+          <h1 className="text-3xl font-bold text-gray-900 mb-4">Contact Us</h1>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Get in touch with us for bookings and inquiries. We're here to make
             your special day perfect.
