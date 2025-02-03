@@ -35,7 +35,7 @@ export default function Gallery() {
 
   return (
     <div id="gallery" className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                                                                                                                                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Gallery</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
@@ -54,17 +54,17 @@ export default function Gallery() {
               <img
                 src={image.url}
                 alt={image.title}
-                className="w-full h-64 object-cover transform group-hover:scale-110 transition duration-500"
+                className="w-full h-100px object-cover transform group-hover:scale-110 transition duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
                 <div className="absolute bottom-4 left-4">
-                  <h3 className="text-white font-medium">{image.title}</h3>
+                  <h1 className="text-white font-medium">{image.title}</h1>
                 </div>
               </div>
             </div>
           ))}
         </div>
-      </div>
+      </div>                                                                                                                                                                                                                            
     </div>
   );
 }
