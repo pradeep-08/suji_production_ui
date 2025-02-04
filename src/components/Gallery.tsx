@@ -53,18 +53,18 @@ export default function Gallery() {
               <img
                 src={image.url}
                 alt={image.title}
-                className="w-full h-82 sm:h-100 md:h-100 lg:h-44 xl:h-72 object-cover transition duration-500"
+                className="w-full h-100px object-cover transform group-hover:scale-110 transition duration-500"
               />
 
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
                 <div className="absolute bottom-4 left-4">
-                  <h3 className="text-white font-medium">{image.title}</h3>
+                  <h1 className="text-white font-medium">{image.title}</h1>
                 </div>
               </div>
             </div>
           ))}
         </div>
-      </div>
+      </div>                                                                                                                                                                                                                            
     </div>
   );
 }

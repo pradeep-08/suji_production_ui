@@ -1,6 +1,6 @@
 import { Phone, Mail, MapPin } from "lucide-react";
 // import { useRef } from "react";
-import emailjs from "@emailjs/browser";
+// import emailjs from "@emailjs/browser";
 import { useEffect } from "react";
 import AOS from "aos";
 
