@@ -56,7 +56,10 @@ export default function Navbar() {
             </a>
             <div className=" icons flex flex-wrap content-center py-2 justify-center list-none ">
               <li className="p-2  hover:text-blue-600">
-                <a href="">
+                <a
+                  target="_blank"
+                  href="https://www.facebook.com/sujihairandmakeup/"
+                >
                   <FaFacebookF />
                 </a>
               </li>
@@ -134,12 +137,18 @@ export default function Navbar() {
 
             <div className=" icons  p-2 flex flex-wrap list-none content-center">
               <li className="p-2  hover:text-blue-600">
-                <a href="">
+                <a
+                  target="_blank"
+                  href="https://www.facebook.com/sujihairandmakeup/"
+                >
                   <FaFacebookF />
                 </a>
               </li>
               <li className="p-2  hover:text-orange-600">
-                <a href="">
+                <a
+                  target="_blank"
+                  href="https://www.instagram.com/sujihairandmakeup/"
+                >
                   <FaInstagram />
                 </a>
               </li>
@@ -149,12 +158,12 @@ export default function Navbar() {
                 </a>
               </li>
               <li className="p-2  hover:text-red-600">
-                <a href="">
+                <a href="sujihairandmakeup@gmail.com">
                   <MdEmail />
                 </a>
               </li>
               <li className="p-2  hover:text-green-600">
-                <a href="">
+                <a target="_blank" href="https://wa.me/9941492115">
                   <IoLogoWhatsapp />
                 </a>
               </li>

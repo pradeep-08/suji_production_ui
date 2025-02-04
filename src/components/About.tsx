@@ -14,7 +14,7 @@ export default function About() {
             
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-8 d-grid">
-                    <h2 className="text-3xl font-bold text-gray-900 mb-4">About</h2>
+                    <h1 className="text-3xl font-bold text-gray-900 mb-4">About</h1>
                 </div>
                 <section className="pt-10 overflow-hidden  md:pt-0 sm:pt-16 2xl:pt-16">
                     <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
