@@ -36,7 +36,7 @@ export default function Gallery() {
     <div id="gallery" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Gallery</h2>
+          <h1 className="text-3xl font-bold text-gray-900 mb-4">Our Gallery</h1>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Browse through our portfolio of makeup transformations, mehandi
             designs, and saree draping styles.
@@ -58,13 +58,13 @@ export default function Gallery() {
 
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
                 <div className="absolute bottom-4 left-4">
-                  <h1 className="text-white font-medium">{image.title}</h1>
+                  <h2 className="text-white font-medium">{image.title}</h2>
                 </div>
               </div>
             </div>
           ))}
         </div>
-      </div>                                                                                                                                                                                                                            
+      </div>
     </div>
   );
 }
