@@ -48,8 +48,8 @@ export default function Contact() {
                 <input
                   name="Full Name"
                   type="text"
-                  className="placeholder-gray-500 mt-1 p-1 block w-full rounded-md border-gray-900 shadow-md focus:border-pink-500 focus:ring-pink-500"
-                  placeholder="Your Name"
+                  className="placeholder-gray-500 mt-1 p-1 block w-full rounded-md border border-[#aaaaaa] focus:border-pink-500 focus:ring-pink-500"
+                  placeholder="Enter your name"
                 />
               </div>
               <div>
@@ -61,7 +61,7 @@ export default function Contact() {
                   name="Email"
                   type="email"
                   placeholder="Your Mail"
-                  className="mt-1 p-1 block w-full rounded-md border-gray-900 shadow-md focus:border-pink-500 focus:ring-pink-500"
+                  className="mt-1 p-1 block w-full rounded-md  border border-[#aaaaaa] focus:border-pink-500 focus:ring-pink-500"
                   required
                 />
               </div>
@@ -72,10 +72,11 @@ export default function Contact() {
                 <input
                   type="tel"
                   pattern="[0-9]{10}"
-                  className="mt-1 p-1 block w-full rounded-md border-gray-900 shadow-md focus:border-pink-500 focus:ring-pink-500"
+                  className="mt-1 p-1 block w-full rounded-md border border-[#aaaaaa] focus:border-pink-500 focus:ring-pink-500"
                   name="Phone Number"
-                  placeholder="+919876543210" 
+                  placeholder="+91 9876543210"
                   required
+                  max="10"
                 />
               </div>
               <div>
@@ -85,7 +86,7 @@ export default function Contact() {
                 <input
                   type="date"
                   name="date"
-                  className="mt-1 p-1 block w-full rounded-md border-gray-900 shadow-md focus:border-pink-500 focus:ring-pink-500"
+                  className="mt-1 p-1 block w-full rounded-md border border-[#aaaaaa] focus:border-pink-500 focus:ring-pink-500"
                 />
               </div>
               <div>
@@ -93,11 +94,10 @@ export default function Contact() {
                   Event
                 </label>
                 <input
-               
                   type="text"
                   name="event"
                   placeholder="Event Name"
-                  className="mt-1 p-1 block w-full rounded-md border-gray-900 shadow-md focus:border-pink-500 focus:ring-pink-500"
+                  className="mt-1 p-1 block w-full rounded-md border border-[#aaaaaa] focus:border-pink-500 focus:ring-pink-500"
                 />
               </div>
               <div>
@@ -105,10 +105,10 @@ export default function Contact() {
                   Message
                 </label>
                 <textarea
-                aria-label="msg-me"
+                  aria-label="msg-me"
                   name="message"
                   rows={4}
-                  className="mt-1 p-1 block w-full rounded-md border-gray-900 shadow-md focus:border-pink-500 focus:ring-pink-500"
+                  className="mt-1 p-1 block w-full rounded-md   border border-[#aaaaaa] focus:border-pink-500 focus:ring-pink-500"
                 />
               </div>
               <button
@@ -157,14 +157,14 @@ export default function Contact() {
                     href="https://maps.app.goo.gl/xvmJuEWPTRAkjoc97"
                     className="text-gray-600"
                   >
-                    Makeup Artist : <b>Suji</b>
+                    Makeup Artist : <b> Suji</b>
                   </a>
                 </div>
               </div>
             </div>
             <div className="mt-8">
-           
-              <iframe title="location"
+              <iframe
+                title="location"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d280.7992693848448!2d80.13686454845711!3d12.928752116473857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525f1b543c2993%3A0x1ffacd20ec75cff2!2s5%2F16%2C%20Ramakrishnapuram%2C%20Kuppusamy%20Nagar%2C%20East%20Tambaram%2C%20Tambaram%2C%20Chennai%2C%20Tamil%20Nadu%20600059!5e0!3m2!1sen!2sin!4v1739266320074!5m2!1sen!2sin"
                 width="100%"
                 height="350"
