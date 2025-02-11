@@ -1,6 +1,5 @@
 import { FaFacebookF } from "react-icons/fa";
 import { IoLogoWhatsapp } from "react-icons/io";
-import { FaYoutube } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
