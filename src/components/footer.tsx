@@ -13,8 +13,8 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-semibold mb-4">About Us</h3>
             <p className="text-gray-400">
-              We are a leading company providing top-notch solutions for your
-              business needs. Our expertise and innovation drive us forward.
+            "Expert hair and makeup for every occasion." <br></br>
+            "Flawless looks, tailored just for you."
             </p>
           </div>
 
@@ -23,17 +23,17 @@ const Footer = () => {
             <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
             <ul>
               <li>
-                <a href="/about" className="text-gray-400 hover:text-white">
+                <a href="#about" className="text-gray-400 hover:text-white">
                   About
                 </a>
               </li>
               <li>
-                <a href="/services" className="text-gray-400 hover:text-white">
+                <a href="#services" className="text-gray-400 hover:text-white">
                   Services
                 </a>
               </li>
               <li>
-                <a href="/contact" className="text-gray-400 hover:text-white">
+                <a href="#contact" className="text-gray-400 hover:text-white">
                   Contact
                 </a>
               </li>
