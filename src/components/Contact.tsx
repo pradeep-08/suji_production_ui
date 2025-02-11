@@ -1,6 +1,4 @@
 import { Phone, Mail, MapPin } from "lucide-react";
-// import { useRef } from "react";
-// import emailjs from "@emailjs/browser";
 import { useEffect } from "react";
 import AOS from "aos";
 
@@ -50,8 +48,8 @@ export default function Contact() {
                 <input
                   name="Full Name"
                   type="text"
-                  // Added name attribute
-                  className="mt-1 p-1 block w-full rounded-md border-gray-900 shadow-md focus:border-pink-500 focus:ring-pink-500"
+                  className="placeholder-gray-500 mt-1 p-1 block w-full rounded-md border-gray-900 shadow-md focus:border-pink-500 focus:ring-pink-500"
+                  placeholder="Your Name"
                 />
               </div>
               <div>
@@ -62,21 +60,21 @@ export default function Contact() {
                   id="to"
                   name="Email"
                   type="email"
-                  // Added name attribute
+                  placeholder="Your Mail"
                   className="mt-1 p-1 block w-full rounded-md border-gray-900 shadow-md focus:border-pink-500 focus:ring-pink-500"
                   required
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-gray-900">
+                <label className="block colour-black text-sm font-medium text-gray-900">
                   Phone
                 </label>
                 <input
-                  type="tel" // Changed to "tel" for phone number input
-                  // Added name attribute
-                  pattern="[0-9]{10}" // Added pattern for 10 digit phone number
+                  type="tel"
+                  pattern="[0-9]{10}"
                   className="mt-1 p-1 block w-full rounded-md border-gray-900 shadow-md focus:border-pink-500 focus:ring-pink-500"
                   name="Phone Number"
+                  placeholder="+919876543210" 
                   required
                 />
               </div>
@@ -86,7 +84,7 @@ export default function Contact() {
                 </label>
                 <input
                   type="date"
-                  name="date" // Added name attribute
+                  name="date"
                   className="mt-1 p-1 block w-full rounded-md border-gray-900 shadow-md focus:border-pink-500 focus:ring-pink-500"
                 />
               </div>
@@ -95,8 +93,10 @@ export default function Contact() {
                   Event
                 </label>
                 <input
+               
                   type="text"
-                  name="event" // Added name attribute
+                  name="event"
+                  placeholder="Event Name"
                   className="mt-1 p-1 block w-full rounded-md border-gray-900 shadow-md focus:border-pink-500 focus:ring-pink-500"
                 />
               </div>
@@ -105,7 +105,8 @@ export default function Contact() {
                   Message
                 </label>
                 <textarea
-                  name="message" // Added name attribute
+                aria-label="msg-me"
+                  name="message"
                   rows={4}
                   className="mt-1 p-1 block w-full rounded-md border-gray-900 shadow-md focus:border-pink-500 focus:ring-pink-500"
                 />
@@ -153,13 +154,24 @@ export default function Contact() {
                   <h3 className="font-medium">Location</h3>
                   <a
                     target="_blank"
-                    href="https://maps.app.goo.gl/FXni1koye5jsVT499"
+                    href="https://maps.app.goo.gl/xvmJuEWPTRAkjoc97"
                     className="text-gray-600"
                   >
-                    Chennai
+                    Makeup Artist : <b>Suji</b>
                   </a>
                 </div>
               </div>
+            </div>
+            <div className="mt-8">
+              <h3 className="font-medium text-gray-900 mb-4">Sujihairandmakeup</h3>
+              <iframe title="location"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d280.7992693848448!2d80.13686454845711!3d12.928752116473857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525f1b543c2993%3A0x1ffacd20ec75cff2!2s5%2F16%2C%20Ramakrishnapuram%2C%20Kuppusamy%20Nagar%2C%20East%20Tambaram%2C%20Tambaram%2C%20Chennai%2C%20Tamil%20Nadu%20600059!5e0!3m2!1sen!2sin!4v1739266320074!5m2!1sen!2sin"
+                width="100%"
+                height="300"
+                style={{ border: 0 }}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
             </div>
           </div>
         </div>
