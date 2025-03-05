@@ -16,10 +16,7 @@ export default function Hero() {
     >
       <Helmet>
         <meta charSet="utf-8" />
-        <title>
-          Suji Makeup Artist - Bridal Makeup, Hair Styling & Saree Draping
-          Services
-        </title>
+        <title>Suji Makeup Artist – Bridal Makeup, Hair & Saree Draping</title>
         <meta
           name="description"
           content="Sujihairandmakeup offers professional hair styling, makeup, and saree draping services. Perfect for weddings, events, and special occasions. Get flawless beauty and makeup results tailored to you!"
