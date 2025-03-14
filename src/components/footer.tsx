@@ -11,7 +11,7 @@ const Footer = () => {
      
       <footer className="bg-gray-800 text-white py-8">
       <Helmet>
-        <title>Stay Connected - Suji Hair & Makeup</title>
+        {/* <title>Stay Connected - Suji Hair & Makeup</title> */}
         <meta
           name="description"
           content="Stay connected with Suji Hair & Makeup. Follow us on social media and contact us for bridal makeup, hair styling, and saree draping services."

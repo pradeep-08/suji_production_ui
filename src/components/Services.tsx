@@ -66,7 +66,7 @@ export default function Services() {
     
       <div data-aos="zoom-in-up" id="services" className=" py-24">
       <Helmet>
-        <title>Our Services - Suji Hair & Makeup</title>
+        {/* <title>Our Services - Suji Hair & Makeup</title> */}
         <meta
           name="description"
           content="Explore our range of services including bridal makeup, hair styling, and saree draping. Book your appointment today!"

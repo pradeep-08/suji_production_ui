@@ -14,7 +14,7 @@ export default function About() {
    
       <div data-aos="slide-right" id="about" className="  pt-24">
       <Helmet>
-        <title>About Us - Suji Hair & Makeup</title>
+        {/* <title>About Us - Suji Hair & Makeup</title> */}
         <meta name="description" content="Learn more about Suji Hair & Makeup. We provide top-tier bridal makeup, hair styling, and saree draping services." />
         <meta property="og:title" content="About Us - Suji Hair & Makeup" />
         <meta property="og:description" content="Get to know Suji Hair & Makeup – your go-to professional for bridal beauty and event styling." />

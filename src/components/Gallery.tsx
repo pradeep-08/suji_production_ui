@@ -39,7 +39,7 @@ export default function Gallery() {
      
       <div id="gallery" className="py-24 bg-white">
       <Helmet>
-        <title>Gallery - Suji Hair & Makeup</title>
+        {/* <title>Gallery - Suji Hair & Makeup</title> */}
         <meta name="description" content="Browse our gallery of bridal makeup, hair styling, and saree draping looks." />
         <meta property="og:title" content="Gallery - Suji Hair & Makeup" />
         <meta property="og:description" content="See our stunning bridal and event makeup transformations in our gallery." />

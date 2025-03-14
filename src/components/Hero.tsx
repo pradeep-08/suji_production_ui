@@ -18,7 +18,7 @@ export default function Hero() {
         className="relative min-h-screen flex items-center"
       >
          <Helmet>
-        <title> Suji Hair & Makeup - Beauty Experts</title>
+        <title > Suji Hair & Makeup - Beauty Experts</title>
         <meta
           name="description"
           content="Transform your look with Suji Hair & Makeup. Bridal makeup, hair styling, and saree draping services for every occasion."
