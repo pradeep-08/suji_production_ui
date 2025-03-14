@@ -12,6 +12,8 @@ import newImg8 from "../img/new/8.jpeg";
 import newImg9 from "../img/new/9.jpeg";
 import newImg10 from "../img/new/10.jpeg";
 import newImg12 from "../img/new/12.jpeg";
+import { Helmet } from "react-helmet";
+
 const images = [
   { url: newImg10, title: "Air Brush Makeup" },
   { url: newImg2, title: "Mugurtham Makeup" },
@@ -33,7 +35,18 @@ export default function Gallery() {
   }, []);
 
   return (
-    <div id="gallery" className="py-24 bg-white">
+    <>
+     
+      <div id="gallery" className="py-24 bg-white">
+      <Helmet>
+        <title>Gallery - Suji Hair & Makeup</title>
+        <meta name="description" content="Browse our gallery of bridal makeup, hair styling, and saree draping looks." />
+        <meta property="og:title" content="Gallery - Suji Hair & Makeup" />
+        <meta property="og:description" content="See our stunning bridal and event makeup transformations in our gallery." />
+        <meta property="og:image" content="https://www.sujihairandmakeup.com/assets/gallery.png" />
+        <meta property="og:url" content="https://sujihairandmakeup.com/gallery" />
+        <link rel="canonical" href="https://sujihairandmakeup.com/gallery" />
+      </Helmet>
       <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-8">
         <div className="text-center mb-16">
           <h1 className="text-3xl font-bold text-gray-900 mb-4">Our Gallery</h1>
@@ -66,5 +79,7 @@ export default function Gallery() {
         </div>
       </div>
     </div>
+    </>
+   
   );
 }

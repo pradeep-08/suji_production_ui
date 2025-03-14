@@ -1,3 +1,4 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Services from "./components/Services";
@@ -8,6 +9,7 @@ import "aos/dist/aos.css";
 import { useEffect } from "react";
 import AOS from "aos";
 import Footer from "./components/footer";
+import { HelmetProvider } from "react-helmet-async";
 
 function App() {
   useEffect(() => {
@@ -15,15 +17,28 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen">
+    <>
+  <HelmetProvider>
       <Navbar />
-      <Hero />
-      <About />
-      <Services />
-      <Gallery />
-      <Contact />
+      <section id="hero">
+        <Hero />
+      </section>
+      <section id="about">
+        <About />
+      </section>
+      <section id="services">
+        <Services />
+      </section>
+      <section id="gallery">
+        <Gallery />
+      </section>
+      <section id="contact">
+        <Contact />
+      </section>
       <Footer />
-    </div>
+  </HelmetProvider>
+
+    </>
   );
 }
 
