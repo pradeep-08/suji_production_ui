@@ -15,7 +15,7 @@ export default function Contact() {
     
       <div data-aos="zoom-in-up" id="contact" className="py-24">
       <Helmet>
-        <title>Contact Us - Suji Hair & Makeup</title>
+        {/* <title>Contact Us - Suji Hair & Makeup</title> */}
         <meta name="description" content="Get in touch with Suji Hair & Makeup for professional bridal makeup, hair styling, and saree draping services." />
         <meta property="og:title" content="Contact Us - Suji Hair & Makeup" />
         <meta property="og:description" content="Reach out to Suji Hair & Makeup for inquiries, bookings, and consultations for your special day." />

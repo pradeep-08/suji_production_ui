@@ -28,7 +28,7 @@ export default function Navbar() {
      
       <nav className="bg-white/95 backdrop-blur-sm fixed w-full z-50 shadow-sm">
       <Helmet>
-        <title>Navigation - Suji Hair & Makeup</title>
+        {/* <title>Navigation - Suji Hair & Makeup</title> */}
         <meta
           name="description"
           content="Navigate through Suji Hair & Makeup’s website to explore our services, gallery, and contact information."
@@ -58,7 +58,7 @@ export default function Navbar() {
             <Link to="/about" onClick={() => handleNavigation("about")}  className="text-black-700 hover:text-pink-600 transition">About</Link>
             <Link to="/gallery" onClick={() => handleNavigation("gallery")}  className="text-black-700 hover:text-pink-600 transition">Gallery</Link>
             <Link to="/services" onClick={() => handleNavigation("services")}  className="text-black-700 hover:text-pink-600 transition">Services</Link>
-            <Link to="/contact" onClick={() => handleNavigation("gallery")}  className="text-black-700 hover:text-pink-600 transition">Contact</Link>
+            <Link to="/contact" onClick={() => handleNavigation("contact")}  className="text-black-700 hover:text-pink-600 transition">Contact</Link>
         
       
               <div className=" icons flex flex-wrap content-center py-2 justify-center list-none ">

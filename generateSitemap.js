@@ -21,7 +21,7 @@ const sitemapPath = path.join(outputDir, "sitemap.xml");
 const pages = [
   { url: "/", changefreq: "daily", priority: 1.0 },
   { url: "/about", changefreq: "monthly", priority: 0.8 },
-  { url: "/services", changefreq: "monthly", priority: 0.8 },
+  { url: "/gallery", changefreq: "monthly", priority: 0.8 },
   { url: "/portfolio", changefreq: "monthly", priority: 0.8 },
   { url: "/contact", changefreq: "yearly", priority: 0.5 },
 ];
