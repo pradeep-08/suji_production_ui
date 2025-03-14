@@ -30,10 +30,10 @@ export default function About() {
             <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
               <div className="grid items-center grid-cols-1 md:grid-cols-2">
                 <div>
-                  <h1 className="text-3xl font-bold leading-tight text-black  sm:text-5xl lg:text-3xl">
+                  <h2 className="text-3xl font-bold leading-tight text-black  sm:text-5xl lg:text-3xl">
                     <br className="block sm:hidden" />
                     Suji Hair and Makeup
-                  </h1>
+                  </h2>
                   <p
                     data-aos="fade-down"
                     className="max-w-lg mt-3 text-xl leading-relaxed text-gray-600  md:mt-8"
