@@ -1,8 +1,8 @@
 import { ArrowRight, Mail } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 import hero from "../img/hero/hero.jpeg";
 import { useEffect } from "react";
 import AOS from "aos";
-import { Helmet } from "react-helmet-async";
 
 export default function Hero() {
   useEffect(() => {
@@ -11,33 +11,33 @@ export default function Hero() {
 
   return (
     <>
-     
+      {/* Helmet for SEO & Social Sharing */}
+      <Helmet>
+        <title>Suji Hair & Makeup - Transform Your Look</title>
+        <meta name="description" content="Professional makeup, traditional mehandi, and elegant saree draping services for all your special occasions." />
+        <meta name="keywords" content="makeup, bridal makeup, mehandi, saree draping, beauty services, Suji Hair & Makeup" />
+        <meta name="author" content="Suji Hair & Makeup" />
+
+        {/* Open Graph for Social Media */}
+        <meta property="og:title" content="Suji Hair & Makeup - Transform Your Look" />
+        <meta property="og:description" content="Expert beauty services for all occasions. Book your appointment now!" />
+        <meta property="og:image" content={hero} />
+        <meta property="og:url" content="https://www.sujihairandmakeup.com/" />
+        <meta property="og:type" content="website" />
+
+        {/* Twitter Card for Better Visibility on Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Suji Hair & Makeup - Transform Your Look" />
+        <meta name="twitter:description" content="Professional makeup, traditional mehandi, and saree draping services." />
+        <meta name="twitter:image" content={hero} />
+      </Helmet>
+
+      {/* Hero Section */}
       <div
         data-aos="fade-zoom-in"
         id="home"
         className="relative min-h-screen flex items-center"
       >
-         <Helmet>
-        <title > Suji Hair & Makeup - Beauty Experts</title>
-        <meta
-          name="description"
-          content="Transform your look with Suji Hair & Makeup. Bridal makeup, hair styling, and saree draping services for every occasion."
-        />
-        <meta
-          property="og:title"
-          content="Suji Hair & Makeup - Beauty Experts"
-        />
-        <meta
-          property="og:description"
-          content="Flawless makeup, expert hair styling, and perfect saree draping – Suji Hair & Makeup is here for your big day!"
-        />
-        <meta
-          property="og:image"
-          content="https://www.sujihairandmakeup.com/assets/hero.png"
-        />
-        <meta property="og:url" content="https://sujihairandmakeup.com/" />
-        <link rel="canonical" href="https://sujihairandmakeup.com/" />
-      </Helmet>
         <div className="absolute inset-0">
           <img
             src={hero}

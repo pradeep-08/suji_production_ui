@@ -2,7 +2,8 @@ import { FaFacebookF } from "react-icons/fa";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { FaInstagram } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
+
 
 
 const Footer = () => {
@@ -10,22 +11,6 @@ const Footer = () => {
     <>
      
       <footer className="bg-gray-800 text-white py-8">
-      <Helmet>
-        {/* <title>Stay Connected - Suji Hair & Makeup</title> */}
-        <meta
-          name="description"
-          content="Stay connected with Suji Hair & Makeup. Follow us on social media and contact us for bridal makeup, hair styling, and saree draping services."
-        />
-        <meta
-          property="og:title"
-          content="Stay Connected - Suji Hair & Makeup"
-        />
-        <meta
-          property="og:description"
-          content="Follow Suji Hair & Makeup for the latest trends in bridal and event makeup."
-        />
-        <link rel="canonical" href="https://sujihairandmakeup.com/" />
-      </Helmet>
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* About Section */}

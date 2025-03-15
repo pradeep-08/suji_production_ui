@@ -9,7 +9,6 @@ import {
 } from "lucide-react";
 import { useEffect } from "react";
 import AOS from "aos";
-import { Helmet } from "react-helmet";
 
 
 const services = [
@@ -65,27 +64,6 @@ export default function Services() {
     <>
     
       <div data-aos="zoom-in-up" id="services" className=" py-24">
-      <Helmet>
-        {/* <title>Our Services - Suji Hair & Makeup</title> */}
-        <meta
-          name="description"
-          content="Explore our range of services including bridal makeup, hair styling, and saree draping. Book your appointment today!"
-        />
-        <meta property="og:title" content="Our Services - Suji Hair & Makeup" />
-        <meta
-          property="og:description"
-          content="Professional bridal and event makeup, hair styling, and saree draping services tailored for your special occasions."
-        />
-        <meta
-          property="og:image"
-          content="https://www.sujihairandmakeup.com/assets/services.png"
-        />
-        <meta
-          property="og:url"
-          content="https://sujihairandmakeup.com/services"
-        />
-        <link rel="canonical" href="https://sujihairandmakeup.com/services" />
-      </Helmet>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h1 className="text-3xl font-bold text-gray-900 mb-4">

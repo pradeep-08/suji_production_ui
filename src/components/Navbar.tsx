@@ -7,8 +7,7 @@ import { FaYoutube } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
-import { Link ,useNavigate } from "react-router-dom";
-import { Helmet } from "react-helmet";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -25,42 +24,55 @@ export default function Navbar() {
   };
   return (
     <>
-     
       <nav className="bg-white/95 backdrop-blur-sm fixed w-full z-50 shadow-sm">
-      <Helmet>
-        {/* <title>Navigation - Suji Hair & Makeup</title> */}
-        <meta
-          name="description"
-          content="Navigate through Suji Hair & Makeup’s website to explore our services, gallery, and contact information."
-        />
-        <meta property="og:title" content="Navigation - Suji Hair & Makeup" />
-        <meta
-          property="og:description"
-          content="Find your way around Suji Hair & Makeup's website with our easy-to-use navigation bar."
-        />
-        <link rel="canonical" href="https://sujihairandmakeup.com/" />
-      </Helmet>
         <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-16">
             <div className="flex items-center">
               <div className="logo max-h-64 w-12">
                 <img src={logo} alt="logo" />
               </div>
-              <span className="ml-2 text-xl font-semibold font-math text-gray-900">
+              <h1 className="ml-2 text-xl font-semibold font-math text-gray-900">
                 Suji Hair and Makeup
-              </span>
-            
+              </h1>
             </div>
 
             <div className="hidden md:flex items-center space-x-8">
-             
-             <Link to="/#" onClick={() => handleNavigation("hero")}  className="text-pink-400 hover:text-pink-600 transition">Home</Link> 
-            <Link to="/about" onClick={() => handleNavigation("about")}  className="text-black-700 hover:text-pink-600 transition">About</Link>
-            <Link to="/gallery" onClick={() => handleNavigation("gallery")}  className="text-black-700 hover:text-pink-600 transition">Gallery</Link>
-            <Link to="/services" onClick={() => handleNavigation("services")}  className="text-black-700 hover:text-pink-600 transition">Services</Link>
-            <Link to="/contact" onClick={() => handleNavigation("contact")}  className="text-black-700 hover:text-pink-600 transition">Contact</Link>
-        
-      
+              <Link
+                to="/#"
+                onClick={() => handleNavigation("hero")}
+                className="text-pink-400 hover:text-pink-600 transition"
+              >
+                Home
+              </Link>
+              <Link
+                to="/about"
+                onClick={() => handleNavigation("about")}
+                className="text-black-700 hover:text-pink-600 transition"
+              >
+                About
+              </Link>
+              <Link
+                to="/gallery"
+                onClick={() => handleNavigation("gallery")}
+                className="text-black-700 hover:text-pink-600 transition"
+              >
+                Gallery
+              </Link>
+              <Link
+                to="/services"
+                onClick={() => handleNavigation("services")}
+                className="text-black-700 hover:text-pink-600 transition"
+              >
+                Services
+              </Link>
+              <Link
+                to="/contact"
+                onClick={() => handleNavigation("contact")}
+                className="text-black-700 hover:text-pink-600 transition"
+              >
+                Contact
+              </Link>
+
               <div className=" icons flex flex-wrap content-center py-2 justify-center list-none ">
                 <li className="p-2  hover:text-blue-600">
                   <a

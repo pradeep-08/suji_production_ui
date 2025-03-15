@@ -1,7 +1,8 @@
 import about2 from "../img/About/About2.jpeg";
 import { useEffect } from "react";
 import AOS from "aos";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
+
 
 
 
@@ -13,15 +14,6 @@ export default function About() {
     <>
    
       <div data-aos="slide-right" id="about" className="  pt-24">
-      <Helmet>
-        {/* <title>About Us - Suji Hair & Makeup</title> */}
-        <meta name="description" content="Learn more about Suji Hair & Makeup. We provide top-tier bridal makeup, hair styling, and saree draping services." />
-        <meta property="og:title" content="About Us - Suji Hair & Makeup" />
-        <meta property="og:description" content="Get to know Suji Hair & Makeup – your go-to professional for bridal beauty and event styling." />
-        <meta property="og:image" content="https://www.sujihairandmakeup.com/assets/about.png" />
-        <meta property="og:url" content="https://sujihairandmakeup.com/about" />
-        <link rel="canonical" href="https://sujihairandmakeup.com/about" />
-      </Helmet>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8 d-grid">
             <h1 className="text-3xl font-bold text-gray-900 mb-4">About</h1>
