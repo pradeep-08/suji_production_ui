@@ -17,7 +17,7 @@ export default function Hero() {
         <meta name="description" content="Professional makeup, traditional mehandi, and elegant saree draping services for all your special occasions." />
         <meta name="keywords" content="makeup, bridal makeup, mehandi, saree draping, beauty services, Suji Hair & Makeup" />
         <meta name="author" content="Suji Hair & Makeup" />
-
+      
         {/* Open Graph for Social Media */}
         <meta property="og:title" content="Suji Hair & Makeup - Transform Your Look" />
         <meta property="og:description" content="Expert beauty services for all occasions. Book your appointment now!" />
