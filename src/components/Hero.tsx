@@ -50,7 +50,7 @@ export default function Hero() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
           <div className="max-w-xl">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Transform Your Look with Expert Beauty Services.
+              Transform Your Look with Expert Beauty Services .
             </h1>
             <p className="text-xl text-gray-200 mb-8 ">
               Professional makeup, traditional mehandi designs, and elegant
