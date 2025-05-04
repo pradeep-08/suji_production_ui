@@ -36,42 +36,48 @@ export default function Gallery() {
   }, []);
 
   return (
-    <> 
-        <div id="gallery" className="py-24 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-8">
-            <div className="text-center mb-16">
-              <h1 className="text-3xl font-bold text-gray-900 mb-4">
-                Our Gallery
-              </h1>
-              <p className="text-gray-600 max-w-2xl mx-auto">
-                Browse through our portfolio of makeup transformations, mehandi
-                designs, and saree draping styles.
-              </p>
-            </div>
+    <>
+      <Helmet>
+        <title>Makeup Portfolio | Real Brides by Suji Hair & Makeup</title>
+        <meta name="description" content="View our gallery of real brides, bridal looks, mehandi designs, and saree draping styles created by Suji Hair & Makeup in Chennai." />
+        <meta name="keywords" content="bridal makeup portfolio, Chennai bride gallery, wedding makeup pictures, mehandi gallery Chennai, saree draping styles" />
+        <link rel="canonical" href="https://www.sujihairandmakeup.com/gallery" />
+      </Helmet>
+      <div id="gallery" className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-8">
+          <div className="text-center mb-16">
+            <h1 className="text-3xl font-bold text-gray-900 mb-4">
+              Our Gallery
+            </h1>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Browse through our portfolio of makeup transformations, mehandi
+              designs, and saree draping styles.
+            </p>
+          </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 sm:grid-cols-1 gap-6">
-              {images.map((image, index) => (
-                <div
-                  key={index}
-                  data-aos="flip-left"
-                  className="group relative overflow-hidden rounded-lg"
-                >
-                  <img
-                    src={image.url}
-                    alt={image.title}
-                    className="w-full h-100px object-cover transform group-hover:scale-110 transition duration-500"
-                  />
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 sm:grid-cols-1 gap-6">
+            {images.map((image, index) => (
+              <div
+                key={index}
+                data-aos="flip-left"
+                className="group relative overflow-hidden rounded-lg"
+              >
+                <img
+                  src={image.url}
+                  alt={image.title}
+                  className="w-full h-100px object-cover transform group-hover:scale-110 transition duration-500"
+                />
 
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
-                    <div className="absolute bottom-4 left-4">
-                      <h2 className="text-white font-medium">{image.title}</h2>
-                    </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                  <div className="absolute bottom-4 left-4">
+                    <h2 className="text-white font-medium">{image.title}</h2>
                   </div>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         </div>
+      </div>
 
     </>
   );

@@ -3,9 +3,6 @@ import { useEffect } from "react";
 import AOS from "aos";
 import { Helmet } from "react-helmet-async";
 
-
-
-
 export default function Contact() {
   useEffect(() => {
     AOS.init({ duration: 2000 });
@@ -13,7 +10,12 @@ export default function Contact() {
 
   return (
     <>
-    
+      <Helmet>
+        <title>Contact Suji Hair & Makeup | Book Your Bridal Makeup in Chennai</title>
+        <meta name="description" content="Get in touch with Suji Hair & Makeup for bridal bookings, makeup trials, and consultations in Chennai. Call or WhatsApp now!" />
+        <meta name="keywords" content="contact bridal makeup artist, book makeup Chennai, makeup appointment Chennai, Suji Hair and Makeup contact" />
+        <link rel="canonical" href="https://www.sujihairandmakeup.com/contact" />
+      </Helmet>
       <div data-aos="zoom-in-up" id="contact" className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -165,7 +167,7 @@ export default function Contact() {
                       href="https://maps.app.goo.gl/xvmJuEWPTRAkjoc97"
                       className="text-gray-600"
                     >
-                      Makeup Artist : <b> Suji</b>
+                      Chennai
                     </a>
                   </div>
                 </div>

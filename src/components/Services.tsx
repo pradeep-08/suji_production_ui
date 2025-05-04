@@ -9,6 +9,7 @@ import {
 } from "lucide-react";
 import { useEffect } from "react";
 import AOS from "aos";
+import { Helmet } from "react-helmet-async";
 
 
 const services = [
@@ -62,7 +63,12 @@ export default function Services() {
   }, []);
   return (
     <>
-    
+      <Helmet>
+        <title>Bridal Makeup, Mehandi & Saree Draping Services in Chennai</title>
+        <meta name="description" content="Explore our bridal services including HD makeup, waterproof makeup, traditional mehandi, and expert saree draping for weddings and events." />
+        <meta name="keywords" content="bridal makeup services Chennai, waterproof bridal makeup, traditional mehandi Chennai, saree draping Chennai, party makeup" />
+        <link rel="canonical" href="https://www.sujihairandmakeup.com/services" />
+      </Helmet>
       <div data-aos="zoom-in-up" id="services" className=" py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">

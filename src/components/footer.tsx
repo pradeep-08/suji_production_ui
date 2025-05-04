@@ -2,14 +2,10 @@ import { FaFacebookF } from "react-icons/fa";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { FaInstagram } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-import { Helmet } from "react-helmet-async";
-
-
 
 const Footer = () => {
   return (
     <>
-     
       <footer className="bg-gray-800 text-white py-8">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">

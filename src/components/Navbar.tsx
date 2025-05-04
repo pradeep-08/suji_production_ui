@@ -7,21 +7,12 @@ import { FaYoutube } from "react-icons/fa6";
 import { FaInstagram } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = React.useState(false);
-  const navigate = useNavigate();
 
-  const handleNavigation = (sectionId: string) => {
-    navigate("/"); // Keep URL clean
-    setTimeout(() => {
-      const section = document.getElementById(sectionId);
-      if (section) {
-        section.scrollIntoView({ behavior: "smooth" });
-      }
-    }, 100); // Delay ensures React updates the page
-  };
+
   return (
     <>
       <nav className="bg-white/95 backdrop-blur-sm fixed w-full z-50 shadow-sm">
@@ -31,43 +22,47 @@ export default function Navbar() {
               <div className="logo max-h-64 w-12">
                 <img src={logo} alt="logo" />
               </div>
-              <h1 className="ml-2 text-xl font-semibold font-math text-gray-900">
-                Suji Hair and Makeup
-              </h1>
+              <Link
+                to=""
+              >
+                <h1 className="ml-2 text-xl font-semibold font-math text-gray-900">
+                  Suji Hair and Makeup
+                </h1>
+              </Link>
+
             </div>
 
             <div className="hidden md:flex items-center space-x-8">
               <Link
-                to="/#"
-                onClick={() => handleNavigation("hero")}
+                to=""
                 className="text-pink-400 hover:text-pink-600 transition"
               >
                 Home
               </Link>
               <Link
                 to="/about"
-                onClick={() => handleNavigation("about")}
+
                 className="text-black-700 hover:text-pink-600 transition"
               >
-                About
+               Why Us ?
               </Link>
               <Link
                 to="/gallery"
-                onClick={() => handleNavigation("gallery")}
+
                 className="text-black-700 hover:text-pink-600 transition"
               >
                 Gallery
               </Link>
               <Link
                 to="/services"
-                onClick={() => handleNavigation("services")}
+
                 className="text-black-700 hover:text-pink-600 transition"
               >
                 Services
               </Link>
               <Link
                 to="/contact"
-                onClick={() => handleNavigation("contact")}
+
                 className="text-black-700 hover:text-pink-600 transition"
               >
                 Contact

@@ -5,15 +5,21 @@ import { Helmet } from "react-helmet-async";
 
 
 
-
 export default function About() {
   useEffect(() => {
     AOS.init({ duration: 2000 });
   }, []);
   return (
     <>
-   
+      <Helmet>
+        <title>Why Choose Us? Suji Hair & Makeup | Top-Rated Bridal Artist in Chennai</title>
+        <meta name="description" content="Learn about Suji, a professional bridal makeup artist in Chennai with 10+ years of experience in bridal beauty, mehandi, and saree draping." />
+        <meta name="keywords" content="about Suji makeup artist, bridal makeup experience, Chennai makeup artist profile, trusted makeup artist Chennai" />
+        <link rel="canonical" href="https://www.sujihairandmakeup.com/about" />
+      </Helmet>
+
       <div data-aos="slide-right" id="about" className="  pt-24">
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8 d-grid">
             <h1 className="text-3xl font-bold text-gray-900 mb-4">About</h1>
