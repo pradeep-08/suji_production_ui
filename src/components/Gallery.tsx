@@ -13,7 +13,6 @@ import newImg9 from "../img/new/9.jpeg";
 import newImg10 from "../img/new/10.jpeg";
 import newImg12 from "../img/new/12.jpeg";
 import { Helmet } from "react-helmet-async";
-import { Container } from "lucide-react";
 
 const images = [
   { url: newImg10, title: "Air Brush Makeup" },
