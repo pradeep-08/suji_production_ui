@@ -100,7 +100,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Dropdown Menu */}
+      {/* Mobile Dropdown Menu
       {isOpen && (
         <div className="md:hidden">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
@@ -161,7 +161,80 @@ export default function Navbar() {
             </ul>
           </div>
         </div>
-      )}
+      )} */}
+
+
+{isOpen && (
+          <div className="md:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center">
+              <a
+                href="#home"
+                className="block px-3 py-2 text-gray-700 hover:text-pink-600"
+              >
+                Home
+              </a>
+              <a
+                href="#about"
+                className="block px-3 py-2 text-gray-700 hover:text-pink-600"
+              >
+                About
+              </a>
+              <a
+                href="#gallery"
+                className="block px-3 py-2 text-gray-700 hover:text-pink-600"
+              >
+                Gallery
+              </a>
+              <a
+                href="#services"
+                className="block px-3 py-2 text-gray-700 hover:text-pink-600"
+              >
+                Services
+              </a>
+              <a
+                href="#contact"
+                className="block px-3 py-2 text-gray-700 hover:text-pink-600"
+              >
+                Contact
+              </a>
+
+              <div className=" icons p-2 flex flex-wrap list-none  justify-center">
+                <li className="p-2  hover:text-blue-600">
+                  <a
+                    target="_blank"
+                    href="https://www.facebook.com/sujihairandmakeup/"
+                  >
+                    <FaFacebookF />
+                  </a>
+                </li>
+                <li className="p-2  hover:text-orange-600">
+                  <a
+                    target="_blank"
+                    href="https://www.instagram.com/sujihairandmakeup/"
+                  >
+                    <FaInstagram />
+                  </a>
+                </li>
+                <li className="p-2  hover:text-red-600">
+                  <a href="">
+                    <FaYoutube />
+                  </a>
+                </li>
+                <li className="p-2  hover:text-red-600">
+                  <a href="sujihairandmakeup@gmail.com">
+                    <MdEmail />
+                  </a>
+                </li>
+                <li className="p-2  hover:text-green-600">
+                  <a target="_blank" href="https://wa.me/9941492115">
+                    <IoLogoWhatsapp />
+                  </a>
+                </li>
+              </div>
+            </div>
+            </div>
+        )}
     </nav>
   );
+  
 }
