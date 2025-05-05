@@ -15,6 +15,35 @@ export default function Contact() {
         <meta name="description" content="Get in touch with Suji Hair & Makeup for bridal bookings, makeup trials, and consultations in Chennai. Call or WhatsApp now!" />
         <meta name="keywords" content="contact bridal makeup artist, book makeup Chennai, makeup appointment Chennai, Suji Hair and Makeup contact" />
         <link rel="canonical" href="https://www.sujihairandmakeup.com/contact" />
+
+        <script type="application/ld+json">
+          {`
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "name": "Contact",
+      "url": "https://sujihairandmakeup.com/contact",
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://sujihairandmakeup.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Contact",
+            "item": "https://sujihairandmakeup.com/contact"
+          }
+        ]
+      }
+    }
+    `}
+        </script>
+
       </Helmet>
       <div data-aos="zoom-in-up" id="contact" className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

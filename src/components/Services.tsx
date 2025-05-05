@@ -68,6 +68,35 @@ export default function Services() {
         <meta name="description" content="Explore our bridal services including HD makeup, waterproof makeup, traditional mehandi, and expert saree draping for weddings and events." />
         <meta name="keywords" content="bridal makeup services Chennai, waterproof bridal makeup, traditional mehandi Chennai, saree draping Chennai, party makeup" />
         <link rel="canonical" href="https://www.sujihairandmakeup.com/services" />
+
+        <script type="application/ld+json">
+          {`
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Services",
+      "url": "https://sujihairandmakeup.com/services",
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://sujihairandmakeup.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Services",
+            "item": "https://sujihairandmakeup.com/services"
+          }
+        ]
+      }
+    }
+    `}
+        </script>
+
       </Helmet>
       <div data-aos="zoom-in-up" id="services" className=" py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

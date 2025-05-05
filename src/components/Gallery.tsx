@@ -41,6 +41,35 @@ export default function Gallery() {
         <meta name="description" content="View our gallery of real brides, bridal looks, mehandi designs, and saree draping styles created by Suji Hair & Makeup in Chennai." />
         <meta name="keywords" content="bridal makeup portfolio, Chennai bride gallery, wedding makeup pictures, mehandi gallery Chennai, saree draping styles" />
         <link rel="canonical" href="https://www.sujihairandmakeup.com/gallery" />
+
+        <script type="application/ld+json">
+          {`
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Gallery",
+      "url": "https://sujihairandmakeup.com/gallery",
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://sujihairandmakeup.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Gallery",
+            "item": "https://sujihairandmakeup.com/gallery"
+          }
+        ]
+      }
+    }
+    `}
+        </script>
+
       </Helmet>
       <div id="gallery" className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-8">
