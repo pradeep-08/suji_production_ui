@@ -111,8 +111,6 @@ export default function Hero() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Suji Hair & Makeup | Best Bridal Makeup Artist in Chennai" />
         <meta name="twitter:description" content="Professional bridal makeup, traditional mehandi, and saree draping services in Chennai. Book now!" />
-        <meta name="twitter:image" content={hero} />
-
         <script type="application/ld+json">
           {`
     {
