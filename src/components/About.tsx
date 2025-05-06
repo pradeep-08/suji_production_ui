@@ -11,7 +11,7 @@ export default function About() {
   }, []);
   return (
     <>
-      <Helmet>
+        <Helmet>
         <title>Why Choose Us? Suji Hair & Makeup | Top-Rated Bridal Artist in Chennai</title>
         <meta name="description" content="Learn about Suji, a professional bridal makeup artist in Chennai with 10+ years of experience in bridal beauty, mehandi, and saree draping." />
         <meta name="keywords" content="about Suji makeup artist, bridal makeup experience, Chennai makeup artist profile, trusted makeup artist Chennai" />
@@ -19,7 +19,7 @@ export default function About() {
 
         <script type="application/ld+json">
           {`
-    {
+           {
       "@context": "https://schema.org",
       "@type": "WebPage",
       "name": "About Us",

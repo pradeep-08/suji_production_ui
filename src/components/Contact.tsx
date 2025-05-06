@@ -14,7 +14,7 @@ export default function Contact() {
         <title>Contact Suji Hair & Makeup | Book Your Bridal Makeup in Chennai</title>
         <meta name="description" content="Get in touch with Suji Hair & Makeup for bridal bookings, makeup trials, and consultations in Chennai. Call or WhatsApp now!" />
         <meta name="keywords" content="contact bridal makeup artist, book makeup Chennai, makeup appointment Chennai, Suji Hair and Makeup contact" />
-        <link rel="canonical" href="https://www.sujihairandmakeup.com/contact" />
+        <link rel="canonical" href="https://sujihairandmakeup.com/contact" />
 
         <script type="application/ld+json">
           {`

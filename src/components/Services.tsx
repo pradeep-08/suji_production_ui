@@ -67,7 +67,7 @@ export default function Services() {
         <title>Bridal Makeup, Mehandi & Saree Draping Services in Chennai</title>
         <meta name="description" content="Explore our bridal services including HD makeup, waterproof makeup, traditional mehandi, and expert saree draping for weddings and events." />
         <meta name="keywords" content="bridal makeup services Chennai, waterproof bridal makeup, traditional mehandi Chennai, saree draping Chennai, party makeup" />
-        <link rel="canonical" href="https://www.sujihairandmakeup.com/services" />
+        <link rel="canonical" href="https://sujihairandmakeup.com/services" />
 
         <script type="application/ld+json">
           {`

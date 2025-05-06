@@ -40,7 +40,7 @@ export default function Gallery() {
         <title>Makeup Portfolio | Real Brides by Suji Hair & Makeup</title>
         <meta name="description" content="View our gallery of real brides, bridal looks, mehandi designs, and saree draping styles created by Suji Hair & Makeup in Chennai." />
         <meta name="keywords" content="bridal makeup portfolio, Chennai bride gallery, wedding makeup pictures, mehandi gallery Chennai, saree draping styles" />
-        <link rel="canonical" href="https://www.sujihairandmakeup.com/gallery" />
+        <link rel="canonical" href="https://sujihairandmakeup.com/gallery" />
 
         <script type="application/ld+json">
           {`

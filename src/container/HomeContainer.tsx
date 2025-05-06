@@ -6,7 +6,6 @@ import Services from '../components/Services';
 import Gallery from '../components/Gallery';
 import Contact from '../components/Contact';
 import Footer from '../components/footer';
-import { Helmet } from 'react-helmet-async';
 
 
 
