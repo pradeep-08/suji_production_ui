@@ -100,11 +100,14 @@ export default function Hero() {
         <meta name="keywords" content="bridal makeup Chennai, best makeup artist Chennai, HD bridal makeup, saree draping artist, Chennai mehandi service, party makeup, wedding makeup Chennai, Suji Hair and Makeup" />
         <meta name="author" content="Suji Hair & Makeup" />
         <link rel="canonical" href="https://sujihairandmakeup.com/" />
+        {/* Open Graph (Facebook) */}
         <meta property="og:title" content="Suji Hair & Makeup | Bridal Makeup Artist in Chennai" />
         <meta property="og:description" content="Get stunning bridal makeup, mehandi designs, and perfect saree draping for your big day. Book Suji Hair & Makeup now!" />
+        <meta property="og:image" content={hero} />
         <meta property="og:url" content="https://sujihairandmakeup.com/" />
         <meta property="og:type" content="website" />
         <meta name="robots" content="max-image-preview:large" />
+        {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Suji Hair & Makeup | Best Bridal Makeup Artist in Chennai" />
         <meta name="twitter:description" content="Professional bridal makeup, traditional mehandi, and saree draping services in Chennai. Book now!" />
