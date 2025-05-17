@@ -95,12 +95,12 @@ export default function Navbar() {
           </ul>
 
           {/* Social Icons */}
-          <div className="flex justify-center mt-4 gap-4 text-xl">
-            <a href="https://www.facebook.com/sujihairandmakeup/" target="_blank" rel="noopener noreferrer"><FaFacebookF /></a>
-            <a href="https://www.instagram.com/sujihairandmakeup/" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
-            <a href="#"><FaYoutube /></a>
-            <a href="mailto:sujihairandmakeup@gmail.com"><MdEmail /></a>
-            <a href="https://wa.me/9941492115" target="_blank" rel="noopener noreferrer"><IoLogoWhatsapp /></a>
+          <div className="flex justify-center mt-4 gap-4 text-xl bg">
+            <a className="bg-white p-1 rounded" href="https://www.facebook.com/sujihairandmakeup/" target="_blank" rel="noopener noreferrer"><FaFacebookF /></a>
+            <a className="bg-white p-1 rounded" href="https://www.instagram.com/sujihairandmakeup/" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
+            <a className="bg-white p-1 rounded" href="https://www.youtube.com/@sujihairandmakeup"><FaYoutube /></a>
+            <a className="bg-white p-1 rounded" href="mailto:sujihairandmakeup@gmail.com"><MdEmail /></a>
+            <a className="bg-white p-1 rounded" href="https://wa.me/9941492115" target="_blank" rel="noopener noreferrer"><IoLogoWhatsapp /></a>
           </div>
         </div>
       )}
