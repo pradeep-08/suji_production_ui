@@ -224,7 +224,7 @@ export default function Hero() {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8 d-grid">
-            <h1 className="text-3xl font-bold text-gray-900 mb-4">About</h1>
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">About</h2>
           </div>
           <section className="pt-10 overflow-hidden  md:pt-0 sm:pt-16 2xl:pt-16">
             <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
@@ -262,9 +262,9 @@ export default function Hero() {
       <div data-aos="zoom-in-up" id="services" className=" py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h1 className="text-3xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
               Our Services
-            </h1>
+            </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               We offer a range of professional beauty services to make you look
               and feel your best on your special day.
@@ -292,9 +292,9 @@ export default function Hero() {
       <div id="gallery" className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-8">
           <div className="text-center mb-16">
-            <h1 className="text-3xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
               Our Gallery
-            </h1>
+            </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               Browse through our portfolio of makeup transformations, mehandi
               designs, and saree draping styles.
@@ -330,7 +330,7 @@ export default function Hero() {
             <div className="bg-white p-10 shadow-md rounded-xl flex-1 flex flex-col justify-between">
               <div>
                 <h2 className="text-pink-600 text-sm font-semibold">Get in Touch</h2>
-                <h1 className="text-3xl font-bold text-gray-900 mt-2 mb-3">Let's Chat, Reach Out to Us</h1>
+                <h2 className="text-3xl font-bold text-gray-900 mt-2 mb-3">Let's Chat, Reach Out to Us</h2>
                 <p className="text-gray-600 text-sm mb-6">Have questions or feedback? We're here to help. Send us a message, and we'll respond within 24 hours.</p>
                 <form action="https://api.web3forms.com/submit" method="POST" className="space-y-4">
                   <input type="hidden" name="access_key" value="6a320d9d-1efa-45d9-9307-885f2424b1ba" />
