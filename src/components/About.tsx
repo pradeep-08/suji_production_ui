@@ -1,12 +1,14 @@
-import aboutCert from "../img/About/About2.jpeg";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Helmet } from "react-helmet-async";
+import aboutCert from "../img/About/About2.jpeg";
+import aboutHero from "../img/About/image.png";
+
 
 export default function About() {
   useEffect(() => {
-    AOS.init({ duration: 2000 });
+    AOS.init({ duration: 1200, once: true });
   }, []);
 
   return (
@@ -24,55 +26,54 @@ export default function About() {
         <link rel="canonical" href="https://www.sujihairandmakeup.com/about" />
         <script type="application/ld+json">
           {`
-          {
-            "@context": "https://schema.org",
-            "@type": "WebPage",
-            "name": "About Us",
-            "url": "https://sujihairandmakeup.com/about",
-            "breadcrumb": {
-              "@type": "BreadcrumbList",
-              "itemListElement": [
-                {
-                  "@type": "ListItem",
-                  "position": 1,
-                  "name": "Home",
-                  "item": "https://sujihairandmakeup.com"
-                },
-                {
-                  "@type": "ListItem",
-                  "position": 2,
-                  "name": "About Us",
-                  "item": "https://sujihairandmakeup.com/about"
-                }
-              ]
+            {
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              "name": "About Us",
+              "url": "https://sujihairandmakeup.com/about",
+              "breadcrumb": {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                  {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://sujihairandmakeup.com"
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "About Us",
+                    "item": "https://sujihairandmakeup.com/about"
+                  }
+                ]
+              }
             }
-          }
           `}
         </script>
       </Helmet>
 
       {/* Hero Section */}
-      <div className="relative h-[90vh] flex items-center justify-center bg-black overflow-hidden">
+      <div className="relative h-[80vh] sm:h-[90vh] flex items-center justify-center bg-black overflow-hidden">
         <img
-
-          src="https://images.unsplash.com/photo-1684868264466-4c4fcf0a5b37?q=80&w=3272&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          src={aboutHero}
           alt="Suji Hair and Makeup Certificate"
           className="absolute inset-0 w-full h-full object-cover object-top"
         />
-        <div className="absolute inset-0 bg-black opacity-50"></div>
-        <div className="relative z-10 text-center text-white px-6">
-          <h1 className="text-5xl font-extrabold mb-4">Who we are?</h1>
-          <p className="text-lg max-w-2xl mx-auto">
+        <div className="absolute inset-0 bg-black/60"></div>
+        <div className="relative z-10 text-center text-white px-4">
+          <h1 className="text-3xl sm:text-5xl font-extrabold mb-4">Who we are?</h1>
+          <p className="text-base sm:text-lg max-w-2xl mx-auto">
             Suji Hair & Makeup is a passionate team of bridal experts helping
             women feel confident, elegant, and radiant on their special day.
           </p>
         </div>
       </div>
 
-      {/* About Section */}
-      <section className="bg-white py-16">
-        <div className="max-w-5xl mx-auto px-6 text-center">
-          <p className="text-xl leading-relaxed text-gray-700" data-aos="fade-up">
+      {/* About Text Section */}
+      <section className="bg-white py-16 px-4 sm:px-6">
+        <div className="max-w-5xl mx-auto text-center" data-aos="fade-up">
+          <p className="text-base sm:text-xl text-gray-700 leading-relaxed">
             At <strong>Suji Hair & Makeup</strong>, we believe that the true beauty of a bride
             lies in the perfect blend of tradition and style. Our mission is to empower every bride
             with <strong>confidence, grace, and elegance</strong> using industry-leading techniques
@@ -84,10 +85,10 @@ export default function About() {
       </section>
 
       {/* Services Grid */}
-      <section className="bg-gray-100 py-16">
-        <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-12" data-aos="fade-up">What We Do</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8" data-aos="fade-up">
+      <section className="bg-gray-100 py-16 px-4 sm:px-6">
+        <div className="max-w-6xl mx-auto" data-aos="fade-up">
+          <h2 className="text-3xl font-bold text-center mb-10">What We Do</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {[
               "Bridal & Reception Makeup",
               "HD / Airbrush / Dewy Finish",
@@ -96,8 +97,13 @@ export default function About() {
               "Pre-Wedding Shoots",
               "Party & Celebrity Makeup",
             ].map((service, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition">
-                <p className="font-semibold text-lg text-gray-800">{service}</p>
+              <div
+                key={index}
+                className="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition"
+              >
+                <p className="font-semibold text-base sm:text-lg text-gray-800">
+                  {service}
+                </p>
               </div>
             ))}
           </div>
@@ -105,36 +111,33 @@ export default function About() {
       </section>
 
       {/* Founder Section */}
-      {/* Founder Section */}
-      <section className="bg-black text-white py-16">
-        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 items-center gap-12">
-          <div data-aos="fade-right">
-            <h3 className="text-3xl font-bold mb-4">The Woman Behind the Brand</h3>
-            <p className="text-lg text-gray-300">
-              Suji is a certified and seasoned makeup artist with 10+ years of
+      <section className="bg-black text-white py-16 px-4 sm:px-6">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div data-aos="fade-up">
+            <h3 className="text-2xl sm:text-3xl font-bold mb-4">The Woman Behind the Brand</h3>
+            <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
+              Suji is a certified and seasoned makeup artist with years of
               experience. She leads a skilled team dedicated to bringing out the
               best in every bride, whether it's for traditional weddings or
               contemporary celebrations. Her passion lies in helping women feel
               radiant and confident on their special days.
             </p>
           </div>
-          <div data-aos="fade-left">
+          <div data-aos="fade-up">
             <img
               src={aboutCert}
               alt="Makeup artist applying foundation"
-              className="rounded-xl shadow-lg w-full"
+              className="rounded-xl shadow-lg w-full object-cover"
             />
           </div>
         </div>
       </section>
 
-
-
       {/* CTA Section */}
-      <section className="bg-pink-100 py-12">
-        <div className="max-w-4xl mx-auto text-center px-6">
-          <h4 className="text-2xl font-bold mb-4">Start Your Bridal Journey With Us</h4>
-          <p className="text-gray-700 mb-6">
+      <section className="bg-pink-100 py-12 px-4 sm:px-6">
+        <div className="max-w-4xl mx-auto text-center" data-aos="fade-up">
+          <h4 className="text-2xl sm:text-3xl font-bold mb-4">Start Your Bridal Journey With Us</h4>
+          <p className="text-base sm:text-lg text-gray-700 mb-6">
             Book your bridal consultation today and let Suji Hair & Makeup create your dream look for your dream day.
           </p>
           <a

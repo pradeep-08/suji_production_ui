@@ -1,12 +1,77 @@
-import { Phone, Mail, MapPin } from "lucide-react";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
+import { Phone, Mail, MapPin, CheckCircle } from "lucide-react";
 import AOS from "aos";
 import { Helmet } from "react-helmet-async";
+import newImg1 from "../img/new/1.jpeg";
+import newImg2 from "../img/new/2.jpeg";
+import newImg3 from "../img/new/3.jpeg";
+import newImg4 from "../img/new/4.jpeg";
+import newImg5 from "../img/new/5.jpeg";
+import newImg6 from "../img/new/6.jpeg";
+import newImg7 from "../img/new/7.jpeg";
+import newImg8 from "../img/new/8.jpeg";
+import newImg9 from "../img/new/9.jpeg";
+import newImg10 from "../img/new/10.jpeg";
+import newImg11 from "../img/new/11.jpeg";
+import newImg12 from "../img/new/12.jpeg";
+import hero from "../img/hero/hero.jpeg";
+
+const makeupOptions = [
+  "Air Brush Makeup",
+  "Mugurtham Makeup",
+  "Engagement Basic Makeup",
+  "Reception Hairstyle",
+  "Saree Draping",
+  "Mugurtham Hairstyle",
+  "Engagement Look",
+  "Pre-Wedding Shoot",
+  "HD Makeup",
+  "Puberty Makeup",
+  "Maternity",
+  "Meganthi",
+  "Others"
+];
+
+const imageSlides = [
+  { title: "Air Brush Makeup", url: newImg10 },
+  { title: "Mugurtham Makeup", url: newImg2 },
+  { title: "Engagement Basic Makeup", url: newImg3 },
+  { title: "Reception Hairstyle", url: newImg4 },
+  { title: "Saree Draping", url: newImg12 },
+  { title: "Mugurtham Hairstyle", url: newImg6 },
+  { title: "Engagement Look", url: newImg7 },
+  { title: "Pre-Wedding Shoot", url: newImg8 },
+  { title: "HD Makeup", url: newImg9 },
+  { title: "Puberty Makeup", url: newImg1 },
+  { title: "Maternity", url: newImg5 },
+  { title: "Meganthi", url: newImg11 },
+  { title: "Others", url: hero }
+];
 
 export default function Contact() {
+  const [selectedMakeup, setSelectedMakeup] = useState("");
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [autoSlide, setAutoSlide] = useState(true);
+
   useEffect(() => {
     AOS.init({ duration: 2000 });
-  }, []);
+
+    if (!autoSlide) return;
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % imageSlides.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [autoSlide]);
+
+  useEffect(() => {
+    if (selectedMakeup) {
+      const index = imageSlides.findIndex((img) => img.title === selectedMakeup);
+      if (index !== -1) {
+        setCurrentSlide(index);
+        setAutoSlide(false);
+      }
+    }
+  }, [selectedMakeup]);
 
   return (
     <>
@@ -15,202 +80,103 @@ export default function Contact() {
         <meta name="description" content="Get in touch with Suji Hair & Makeup for bridal bookings, makeup trials, and consultations in Chennai. Call or WhatsApp now!" />
         <meta name="keywords" content="contact bridal makeup artist, book makeup Chennai, makeup appointment Chennai, Suji Hair and Makeup contact" />
         <link rel="canonical" href="https://sujihairandmakeup.com/contact" />
-
-        <script type="application/ld+json">
-          {`
-    {
-      "@context": "https://schema.org",
-      "@type": "ContactPage",
-      "name": "Contact",
-      "url": "https://sujihairandmakeup.com/contact",
-      "breadcrumb": {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://sujihairandmakeup.com"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Contact",
-            "item": "https://sujihairandmakeup.com/contact"
-          }
-        ]
-      }
-    }
-    `}
-        </script>
-
       </Helmet>
-      <div data-aos="zoom-in-up" id="contact" className="py-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h1 className="text-3xl font-bold text-gray-900 mb-4">
-              Contact Us
-            </h1>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Get in touch with us for bookings and inquiries. We're here to
-              make your special day perfect.
-            </p>
-          </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white p-8 rounded-lg shadow-md">
-              <form
-                action="https://api.web3forms.com/submit"
-                method="POST"
-                id="request"
-                className="space-y-6"
-              >
-                <div>
-                  <input
-                    type="hidden"
-                    name="access_key"
-                    value="6a320d9d-1efa-45d9-9307-885f2424b1ba"
-                  />
-                  <input
-                    type="hidden"
-                    name="subject"
-                    value="New Request from Client ❗⚠️"
-                  />
-                  <input
-                    type="hidden"
-                    name="from_name"
-                    value="Client Notification ⚠️"
-                  />
-                  <label className="block text-sm font-medium text-gray-900">
-                    Name
-                  </label>
-                  <input
-                    name="Full Name"
-                    type="text"
-                    className="placeholder-gray-500 mt-1 p-1 block w-full rounded-md border border-[#aaaaaa] focus:border-pink-500 focus:ring-pink-500"
-                    placeholder="Enter your name"
-                  />
+      <div className="py-24 bg-[#f9fafb] px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-10 items-stretch">
+          <div className="bg-white p-10 shadow-md rounded-xl flex-1 flex flex-col justify-between">
+            <div>
+              <h2 className="text-pink-600 text-sm font-semibold">Get in Touch</h2>
+              <h1 className="text-3xl font-bold text-gray-900 mt-2 mb-3">Let's Chat, Reach Out to Us</h1>
+              <p className="text-gray-600 text-sm mb-6">Have questions or feedback? We're here to help. Send us a message, and we'll respond within 24 hours.</p>
+              <form action="https://api.web3forms.com/submit" method="POST" className="space-y-4">
+                <input type="hidden" name="access_key" value="6a320d9d-1efa-45d9-9307-885f2424b1ba" />
+                <input type="hidden" name="subject" value="New Request from Client ❗⚠️" />
+                <input type="hidden" name="from_name" value="Client Notification ⚠️" />
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700">First Name<span className="text-red-500">*</span></label>
+                    <input type="text" name="First Name" placeholder="First name" required className="w-full mt-1 px-3 py-2 border rounded-md focus:border-green-500 focus:ring-green-500" />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700">Last Name</label>
+                    <input type="text" name="Last Name" placeholder="Last name" className="w-full mt-1 px-3 py-2 border rounded-md focus:border-green-500 focus:ring-green-500" />
+                  </div>
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-900">
-                    Email
-                  </label>
-                  <input
-                    id="to"
-                    name="Email"
-                    type="email"
-                    placeholder="Your Mail"
-                    className="mt-1 p-1 block w-full rounded-md  border border-[#aaaaaa] focus:border-pink-500 focus:ring-pink-500"
-                    required
-                  />
+                  <label className="block text-sm font-medium text-gray-700">Email Address<span className="text-red-500">*</span></label>
+                  <input type="email" name="Email" placeholder="Email address" required className="w-full mt-1 px-3 py-2 border rounded-md focus:border-green-500 focus:ring-green-500" />
                 </div>
                 <div>
-                  <label className="block colour-black text-sm font-medium text-gray-900">
-                    Phone
-                  </label>
-                  <input
-                    type="tel"
-                    pattern="[0-9]{10}"
-                    className="mt-1 p-1 block w-full rounded-md border border-[#aaaaaa] focus:border-pink-500 focus:ring-pink-500"
-                    name="Phone Number"
-                    placeholder="+91 9876543210"
-                    required
-                    max="10"
-                  />
+                  <label className="block text-sm font-medium text-gray-700">Select Makeup Service</label>
+                  <select
+                    name="Makeup Type"
+                    className="w-full mt-1 px-3 py-2 border rounded-md focus:border-green-500 focus:ring-green-500"
+                    value={selectedMakeup}
+                    onChange={(e) => setSelectedMakeup(e.target.value)}
+                  >
+                    <option value="">-- Please select --</option>
+                    {makeupOptions.map((option, index) => (
+                      <option key={index} value={option}>{option}</option>
+                    ))}
+                  </select>
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-900">
-                    Date
-                  </label>
-                  <input
-                    type="date"
-                    name="date"
-                    className="mt-1 p-1 block w-full rounded-md border border-[#aaaaaa] focus:border-pink-500 focus:ring-pink-500"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-900">
-                    Event
-                  </label>
-                  <input
-                    type="text"
-                    name="event"
-                    placeholder="Event Name"
-                    className="mt-1 p-1 block w-full rounded-md border border-[#aaaaaa] focus:border-pink-500 focus:ring-pink-500"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700">
-                    Message
-                  </label>
+                  <label className="block text-sm font-medium text-gray-700">Message</label>
                   <textarea
-                    aria-label="msg-me"
-                    name="message"
-                    rows={4}
-                    className="mt-1 p-1 block w-full rounded-md   border border-[#aaaaaa] focus:border-pink-500 focus:ring-pink-500"
+                    name="Message"
+                    rows={5}
+                    placeholder={`I am looking to book the \"${selectedMakeup || 'a makeup service'}\" package with Suji Hair & Makeup. Kindly share details about pricing and availability.`}
+                    className="w-full mt-1 px-3 py-2 border rounded-md focus:border-green-500 focus:ring-green-500"
                   />
                 </div>
-                <button
-                  type="submit"
-                  className="w-full bg-pink-600 text-white px-4 py-2 rounded-md hover:bg-pink-700 transition"
-                >
-                  Book Now
-                </button>
+                <div className="flex items-start space-x-2 text-sm">
+                  <input type="checkbox" required className="mt-1" />
+                  <p>I agree to our friendly <a href="/privacy" className="text-pink-600 underline">privacy policy</a></p>
+                </div>
+                <button type="submit" className="w-full bg-pink-600 text-white font-semibold py-2 px-4 rounded-md hover:bg-pink-700">Send Message</button>
               </form>
             </div>
+          </div>
 
-            <div className="bg-white p-8 rounded-lg shadow-md">
-              <div className="space-y-6">
-                <div className="flex items-start space-x-3">
-                  <Phone className="h-6 w-6 text-pink-600 flex-shrink-0" />
-                  <div>
-                    <h3 className="font-medium">Phone</h3>
-                    <a
-                      target="_blank"
-                      href="https://wa.me/9941492115"
-                      className="text-gray-600"
-                    >
-                      +91 9941492115
-                    </a>
-                  </div>
+          <div className="flex-1 flex flex-col justify-between">
+            <div className="relative w-full h-full max-h-[660px] overflow-hidden rounded-xl">
+              <img
+                key={currentSlide}
+                src={imageSlides[currentSlide].url}
+                alt={imageSlides[currentSlide].title}
+                className="absolute top-0 left-0 w-full h-full object-cover transition-all duration-1000 ease-in-out"
+              />
+              {selectedMakeup && imageSlides[currentSlide].title === selectedMakeup && (
+                <div className="absolute top-2 right-2 bg-green-600 text-white px-3 py-1 rounded-full text-xs flex items-center gap-1">
+                  <CheckCircle className="h-4 w-4" /> Selected
                 </div>
-                <div className="flex items-start space-x-3">
-                  <Mail className="h-6 w-6 text-pink-600 flex-shrink-0" />
-                  <div>
-                    <h3 className="font-medium">Email</h3>
-                    <a
-                      target="_blank"
-                      href="mailto:sujihairandmakeup@gmail.com"
-                      className="text-gray-600"
-                    >
-                      sujihairandmakeup@gmail.com
-                    </a>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <MapPin className="h-6 w-6 text-pink-600 flex-shrink-0" />
-                  <div>
-                    <h3 className="font-medium">Location</h3>
-                    <a
-                      target="_blank"
-                      href="https://maps.app.goo.gl/xvmJuEWPTRAkjoc97"
-                      className="text-gray-600"
-                    >
-                      Chennai
-                    </a>
-                  </div>
+              )}
+              <div className="absolute bottom-2 left-2 bg-black/70 text-white text-xs md:text-sm px-3 py-1 rounded-md">
+                {imageSlides[currentSlide].title}
+              </div>
+            </div>
+            <div className="bg-white p-6 rounded-xl shadow-md space-y-6 mt-6">
+              <div className="flex items-start space-x-3">
+                <Mail className="text-pink-600" />
+                <div>
+                  <h4 className="font-semibold">Email</h4>
+                  <a href="mailto:sujihairandmakeup@gmail.com" className="text-sm text-gray-600">sujihairandmakeup@gmail.com</a>
                 </div>
               </div>
-              <div className="mt-8">
-                <iframe
-                  title="location"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d280.7992693848448!2d80.13686454845711!3d12.928752116473857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525f1b543c2993%3A0x1ffacd20ec75cff2!2s5%2F16%2C%20Ramakrishnapuram%2C%20Kuppusamy%20Nagar%2C%20East%20Tambaram%2C%20Tambaram%2C%20Chennai%2C%20Tamil%20Nadu%20600059!5e0!3m2!1sen!2sin!4v1739266320074!5m2!1sen!2sin"
-                  width="100%"
-                  height="350"
-                  style={{ border: 0 }}
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                ></iframe>
+              <div className="flex items-start space-x-3">
+                <Phone className="text-pink-600" />
+                <div>
+                  <h4 className="font-semibold">Phone</h4>
+                  <a href="tel:+919941492115" className="text-sm text-gray-600">+91 9941492115</a>
+                </div>
+              </div>
+              <div className="flex items-start space-x-3">
+                <MapPin className="text-pink-600" />
+                <div>
+                  <h4 className="font-semibold">Location</h4>
+                  <a href="https://maps.app.goo.gl/xvmJuEWPTRAkjoc97" target="_blank" className="text-sm text-gray-600">5/16 Ramakrishnapuram, East Tambaram, Chennai - 600059</a>
+                </div>
               </div>
             </div>
           </div>
