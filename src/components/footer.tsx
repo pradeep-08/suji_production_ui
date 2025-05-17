@@ -1,7 +1,3 @@
-import { FaFacebookF } from "react-icons/fa";
-import { IoLogoWhatsapp } from "react-icons/io";
-import { FaInstagram } from "react-icons/fa";
-import { MdEmail } from "react-icons/md";
 
 const Footer = () => {
   return (
