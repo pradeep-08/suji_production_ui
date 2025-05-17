@@ -91,19 +91,17 @@ export default function Gallery() {
         </p>
 
         {/* Curved Floating Image Strip */}
-        <div className="flex justify-center items-end gap-4 transform scale-[1.05] skew-y-[-1.5deg] px-4 md:px-0">
+        <div className="flex flex-wrap justify-center items-end gap-4 transform scale-[1.05] skew-y-[-1.5deg] px-4 md:px-0">
           {curvedImages.map((img, index) => (
             <a
               key={index}
               href="/contact"
-              className="relative overflow-hidden transform skew-y-[1.5deg] rounded-2xl transition-all hover:scale-105 hover:shadow-2xl group"
+              className="relative overflow-hidden transform skew-y-[1.5deg] rounded-2xl transition-all hover:scale-105 hover:shadow-2xl group w-[160px] sm:w-[180px] md:w-[200px] lg:w-[220px] h-[280px] sm:h-[300px] md:h-[320px]"
               style={{
-                width: "220px",
-                height: "320px",
                 zIndex: 10 - index,
               }}
             >
-              {/* Background image */}
+              {/* Image */}
               <img
                 src={img}
                 alt={`Gallery showcase ${index}`}
@@ -151,6 +149,7 @@ export default function Gallery() {
             </a>
           ))}
         </div>
+
 
 
       </section>

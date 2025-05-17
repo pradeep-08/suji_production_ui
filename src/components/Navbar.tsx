@@ -168,31 +168,31 @@ export default function Navbar() {
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center">
               <a
-                href="#home"
+                href="/"
                 className="block px-3 py-2 text-gray-700 hover:text-pink-600"
               >
                 Home
               </a>
               <a
-                href="#about"
+                href="/about"
                 className="block px-3 py-2 text-gray-700 hover:text-pink-600"
               >
                 About
               </a>
               <a
-                href="#gallery"
+                href="/gallery"
                 className="block px-3 py-2 text-gray-700 hover:text-pink-600"
               >
                 Gallery
               </a>
               <a
-                href="#services"
+                href="/services"
                 className="block px-3 py-2 text-gray-700 hover:text-pink-600"
               >
                 Services
               </a>
               <a
-                href="#contact"
+                href="/contact"
                 className="block px-3 py-2 text-gray-700 hover:text-pink-600"
               >
                 Contact
