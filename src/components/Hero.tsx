@@ -1,4 +1,4 @@
-import { } from "lucide-react";
+import { Star, StarIcon } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import hero from "../img/hero/hero.jpeg";
 import about2 from "../img/About/About2.jpeg";
@@ -26,13 +26,188 @@ import {
   Brush,
   Phone, MapPin, ArrowRight, Mail, CheckCircle
 } from "lucide-react";
+import { FaBrush } from "react-icons/fa";
+import { LuCalendarArrowUp } from "react-icons/lu";
 
-
+export interface Service {
+  id: string;
+  tag?: string;
+  url?: any;
+  icon?: string;
+  title: string;
+  price: string;
+  rating: string;
+  reviews: string;
+  category: string;
+  description: string;
+  featured?: boolean;
+}
 export default function Hero() {
   useEffect(() => {
     AOS.init({ duration: 2000 });
   }, []);
-  const services = [
+  // { title: "Air Brush Makeup", url: newImg10 },
+  // { title: "Mugurtham Makeup", url: newImg2 },
+  // { title: "Engagement Basic Makeup", url: newImg3 },
+  // { title: "", url: newImg4 },
+  // { title: "", url: newImg12 },
+  // { title: "", url: newImg6 },
+  // { title: "", url: newImg7 },
+  // { title: "", url: newImg8 },
+  // { title: "HD Makeup", url: newImg9 },
+  // { title: "Puberty Makeup", url: newImg1 },
+  // { title: "Maternity", url: newImg5 },
+  // { title: "Meganthi", url: newImg11 },
+  // { title: "Others", url: hero }
+  const services: Service[] = [
+    {
+      id: "1",
+      tag: "Most Preferred",
+      url: newImg10,
+      icon: "/icons/crown.svg",
+      title: "Air Brush Makeup",
+      price: "₹10,000",
+      rating: "5.0",
+      reviews: "12 Reviews",
+      category: "Bridal Makeup",
+      description: "Flawless, long-lasting makeup application using airbrush technology for a natural finish",
+      featured: true
+    },
+    {
+      id: "2",
+      tag: "Popular",
+      url: newImg2,
+      icon: "newImg2",
+      title: "Mugurtham Makeup",
+      price: "₹2,500 - ₹5,000",
+      rating: "4.9",
+      reviews: "28 Reviews",
+      category: "Mehndi Artist",
+      description: "Traditional South Indian bridal makeup for the wedding ceremony"
+    },
+    {
+      id: "3",
+      tag: "💸 Budget Friendly",
+      url: newImg3,
+      icon: "/icons/saree.svg",
+      title: "Engagement Basic Makeup",
+      price: "₹800 - ₹1,500",
+      rating: "4.7",
+      reviews: "35 Reviews",
+      category: "Saree Styling",
+      description: "Elegant yet simple makeup look perfect for engagement ceremonies"
+    },
+    {
+      id: "4",
+      tag: "🔥 New",
+      url: newImg4,
+      icon: "/icons/scissors.svg",
+      title: "Engagement Look",
+      price: "₹1,200 - ₹3,000",
+      rating: "4.8",
+      reviews: "8 Reviews",
+      category: "Hair Services",
+      description: "Complete bridal hair styling for engagement ceremonies with accessories"
+    },
+    {
+      id: "5",
+      tag: "✨Most Preferred",
+      url: newImg12,
+      icon: "/icons/scissors.svg",
+      title: "Saree Draping",
+      price: "₹1,200 - ₹3,000",
+      rating: "4.8",
+      reviews: "8 Reviews",
+      category: "Hair Services",
+      description: "Professional saree draping in various traditional and contemporary styles"
+    },
+    {
+      id: "6",
+      tag: "⭐ Popular",
+      url: newImg6,
+      icon: "/icons/scissors.svg",
+      title: "Mugurtham Hairstyle",
+      price: "₹1,200 - ₹3,000",
+      rating: "4.8",
+      reviews: "8 Reviews",
+      category: "Hair Services",
+      description: "Traditional South Indian bridal hairstyle with jewelry and accessories"
+    },
+    {
+      id: "7",
+      tag: "🔥 New",
+      url: newImg7,
+      icon: "/icons/scissors.svg",
+      title: "Pre-Wedding Shoot",
+      price: "₹1,200 - ₹3,000",
+      rating: "4.8",
+      reviews: "8 Reviews",
+      category: "Hair Services",
+      description: "Complete hair and makeup services for pre-wedding photo shoots"
+    },
+    {
+      id: "8",
+      tag: "Most Preferred",
+      url: newImg8,
+      icon: "/icons/scissors.svg",
+      title: "Pre-Wedding Shoot",
+      price: "₹1,200 - ₹3,000",
+      rating: "4.8",
+      reviews: "8 Reviews",
+      category: "Hair Services",
+      description: "Professional makeup and styling for pre-wedding photography sessions"
+    },
+    {
+      id: "9",
+      tag: "Popular",
+      url: newImg9,
+      icon: "/icons/scissors.svg",
+      title: "HD Makeup",
+      price: "₹1,200 - ₹3,000",
+      rating: "4.8",
+      reviews: "8 Reviews",
+      category: "Hair Services",
+      description: "High-definition makeup perfect for photography and special occasions"
+    },
+    {
+      id: "10",
+      tag: "🔥 New",
+      url: newImg1,
+      icon: "/icons/scissors.svg",
+      title: "Puberty Makeup",
+      price: "₹1,200 - ₹3,000",
+      rating: "4.8",
+      reviews: "8 Reviews",
+      category: "Hair Services",
+      description: "Special makeup services for puberty ceremonies and coming-of-age events"
+    },
+    {
+      id: "11",
+      tag: "💸 Budget Friendly",
+      url: newImg5,
+      icon: "/icons/scissors.svg",
+      title: "Maternity",
+      price: "₹1,200 - ₹3,000",
+      rating: "4.8",
+      reviews: "8 Reviews",
+      category: "Hair Services",
+      description: "Makeup and styling services tailored for maternity photo shoots"
+    },
+    {
+      id: "12",
+      tag: "💸 Budget Friendly",
+      url: newImg11,
+      icon: "/icons/scissors.svg",
+      title: "Meganthi",
+      price: "₹1,200 - ₹3,000",
+      rating: "4.8",
+      reviews: "8 Reviews",
+      category: "Hair Services",
+      description: "Traditional makeup and hairstyling for South Indian meganthi ceremonies"
+    }
+  ];
+
+  const servicesIn = [
     {
       icon: <Palette className="h-8 w-8" />,
       title: "Professional Makeup",
@@ -107,6 +282,73 @@ export default function Hero() {
     "Others"
   ];
 
+  const testimonials = [
+    {
+      name: "Anitha Ramesh",
+      username: "radiant_beauty_01",
+      rating: 5,
+      review:
+        "She did my makeup and hair so well for my wedding. Everyone said I looked amazing. Thank you!",
+    },
+    {
+      name: "Karthika Ravi",
+      username: "makeup_muse_22",
+      rating: 4,
+      review:
+        "Good hair styling and soft makeup. It stayed perfect the whole day. I'm happy with the service.",
+    },
+    {
+      name: "Deepika Natarajan",
+      username: "glam_goddess_90",
+      rating: 5,
+      review:
+        "Very professional and friendly. My engagement look came out so beautiful. Highly recommend.",
+    },
+    {
+      name: "Meena Kumar",
+      username: "bridal_bliss_33",
+      rating: 4,
+      review:
+        "Nice work! She gave me a natural glow look which I really loved. My photos came out great too.",
+    },
+    {
+      name: "Revathi Srinivasan",
+      username: "flawless_finish_05",
+      rating: 5,
+      review:
+        "The hair bun and eye makeup were perfect. I looked just how I imagined. So glad I chose her.",
+    },
+    {
+      name: "Lakshmi Narayan",
+      username: "elegant_glow_78",
+      rating: 4,
+      review:
+        "My party makeup and hair were done nicely. Everyone complimented me. Thank you for the great work!",
+    },
+  ];
+
+  function getDynamicDate(index: number) {
+    const today = new Date();
+    const monthsAgo = today.getMonth() - (index % 2 === 0 ? 1 : 2);
+    const reviewDate = new Date(today);
+    reviewDate.setMonth(monthsAgo);
+    return reviewDate.toLocaleDateString("en-IN", {
+      year: "numeric",
+      month: "short",
+      day: "numeric",
+    });
+  }
+
+
+  function getInitials(name: string) {
+    return name
+      .split(" ")
+      .map((n) => n[0])
+      .join("")
+      .toUpperCase();
+  }
+
+
   const imageSlides = [
     { title: "Air Brush Makeup", url: newImg10 },
     { title: "Mugurtham Makeup", url: newImg2 },
@@ -145,6 +387,8 @@ export default function Hero() {
       }
     }
   }, [selectedMakeup]);
+
+
   return (
     <>
       {/* Helmet for SEO & Social Sharing */}
@@ -259,6 +503,7 @@ export default function Hero() {
           </section>
         </div>
       </div>
+      {/* Service Section */}
       <div data-aos="zoom-in-up" id="services" className=" py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -273,7 +518,7 @@ export default function Hero() {
 
           <a href="#contact">
             <div data-aos=" ease-in" className="grid md:grid-cols-3 gap-8">
-              {services.map((service, index) => (
+              {servicesIn.map((service, index) => (
                 <div
                   key={index}
                   className="bg-white p-8 rounded-lg shadow-md hover:shadow-lg transition"
@@ -290,38 +535,113 @@ export default function Hero() {
         </div>
       </div>
       <div id="gallery" className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Our Gallery
+              Our Makeup Services
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Browse through our portfolio of makeup transformations, mehandi
-              designs, and saree draping styles.
+              Professional makeup and styling services for all occasions
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 sm:grid-cols-1 gap-6">
-            {images.map((image, index) => (
-              <div
-                key={index}
-                data-aos="flip-left"
-                className="group relative overflow-hidden rounded-lg"
-              >
-                <img
-                  src={image.url}
-                  alt={image.title}
-                  className="w-full h-100px object-cover transform group-hover:scale-110 transition duration-500"
-                />
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service) => (
+              <div key={service.id} className="group relative rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+                {/* Tag */}
+                {service.tag && (
+                  <div className="absolute top-4 left-4 bg-white text-pink-600 font-bold px-3 py-1 rounded-full text-xs z-10">
+                    {service.tag}
+                  </div>
+                )}
 
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
-                  <div className="absolute bottom-4 left-4">
-                    <h2 className="text-white font-medium">{image.title}</h2>
+                {/* Image */}
+                <div className="h-64 overflow-hidden">
+                  <img
+                    src={service.url}
+                    alt={service.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+
+                {/* Service Info */}
+                <div className="p-5 bg-white">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">
+                    {service.title}
+                  </h3>
+
+                  <p className="text-gray-600 mb-4">{service.description}</p>
+
+                  <div className="flex justify-between items-center mb-4">
+                    <span className="text-pink-600 font-bold text-lg">
+                      {service.price}
+                    </span>
+                    <div className="flex items-center">
+                      <span className="text-yellow-500 mr-1">★</span>
+                      <span className="text-gray-700">{service.rating}</span>
+                      <span className="text-gray-500 text-sm ml-2">
+                        ({service.reviews})
+                      </span>
+                    </div>
+                  </div>
+                 
+                 <div className="flex space-x-3">
+                     <button className="flex-1 border border-pink-600 text-pink-600 hover:bg-pink-600 hover:text-white py-2 px-4 rounded transition-colors">
+                    Details
+                  </button>
+                    <a href="/contact"> <button className="flex items-center justify-center flex-1 bg-pink-600 hover:bg-pink-700 text-white py-2 px-4 rounded transition-colors gap-2">
+                      <LuCalendarArrowUp className="h-5 w-5" />
+                      Book Now
+                    </button></a>
                   </div>
                 </div>
               </div>
             ))}
           </div>
+        </div>
+      </div>
+      <div className="bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-10">
+          <span className="text-sm font-semibold text-green-600 bg-green-100 px-3 py-1 rounded-full">
+            Testimonials
+          </span>
+          <h2 className="mt-4 text-3xl font-bold text-gray-900">Our trusted clients</h2>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+          {testimonials.map((t, index) => (
+            <div
+              key={index}
+              className="bg-white p-6 rounded-xl shadow text-sm text-gray-700"
+            >
+              <div className="flex gap-1 mb-4">
+                {[...Array(5)].map((_, i) => (
+                  <Star
+                    key={i}
+                    size={20}
+                    className={
+                      i < t.rating ? "text-green-500 fill-green-500" : "text-gray-300"
+                    }
+                    fill={i < t.rating ? "currentColor" : "none"}
+                  />
+                ))}
+              </div>
+              <p className="mb-4">"{t.review}"</p>
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <div className="h-10 w-10 rounded-full bg-gray-200 flex items-center justify-center text-sm font-semibold text-gray-700">
+                    {getInitials(t.name)}
+                  </div>
+                  <div>
+                    <p className="font-semibold text-gray-900">{t.name}</p>
+                    <p className="text-xs text-gray-500">@{t.username}</p>
+                  </div>
+                </div>
+                <div className="text-xs text-gray-400 mt-1">
+                  {getDynamicDate(index)}
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
       <div data-aos="zoom-in-up" id="contact" className="py-24">
@@ -369,7 +689,7 @@ export default function Hero() {
                     <textarea
                       name="Message"
                       rows={5}
-                      placeholder={`I am looking to book the \"${selectedMakeup || 'a makeup service'}\" package with Suji Hair & Makeup. Kindly share details about pricing and availability.`}
+                      placeholder={`I am looking to book the \"₹{selectedMakeup || 'a makeup service'}\" package with Suji Hair & Makeup. Kindly share details about pricing and availability.`}
                       className="w-full mt-1 px-3 py-2 border rounded-md focus:border-green-500 focus:ring-green-500"
                     />
                   </div>
