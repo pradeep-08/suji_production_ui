@@ -13,5 +13,7 @@ export default {
       blinkWave: 'blinkWave 2s infinite',
     },},
   },
-  plugins: [],
+plugins: [
+  require('tailwind-scrollbar-hide')
+]
 };

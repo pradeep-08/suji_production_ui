@@ -100,7 +100,7 @@ export default function Navbar() {
             <a className="bg-white p-1 rounded" href="https://www.instagram.com/sujihairandmakeup/" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
             <a className="bg-white p-1 rounded" href="https://www.youtube.com/@sujihairandmakeup"><FaYoutube /></a>
             <a className="bg-white p-1 rounded" href="mailto:sujihairandmakeup@gmail.com"><MdEmail /></a>
-            <a className="bg-white p-1 rounded" href="https://wa.me/9941492115" target="_blank" rel="noopener noreferrer"><IoLogoWhatsapp /></a>
+            <a className="bg-white p-1 rounded" href="https://wa.me/7305931283" target="_blank" rel="noopener noreferrer"><IoLogoWhatsapp /></a>
           </div>
         </div>
       )}

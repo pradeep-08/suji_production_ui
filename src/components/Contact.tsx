@@ -168,7 +168,7 @@ export default function Contact() {
                 <Phone className="text-pink-600" />
                 <div>
                   <h4 className="font-semibold">Phone</h4>
-                  <a href="tel:+919941492115" className="text-sm text-gray-600">+91 9941492115</a>
+                  <a href="tel:+919941492115" className="text-sm text-gray-600">+91 9941492115 / 7305931283</a>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
