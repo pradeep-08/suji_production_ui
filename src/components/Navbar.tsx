@@ -19,6 +19,7 @@ export default function Navbar() {
     "/gallery": "Gallery",
     "/services": "Services",
     "/contact": "Contact",
+     "*": "Page not Found",
   };
 
   const currentTitle = pageTitles[location.pathname] || "";
