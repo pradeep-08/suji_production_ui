@@ -43,42 +43,34 @@ export default function Gallery() {
     <>
       <Helmet>
         <title>Bridal Makeup Gallery | Suji Hair & Makeup Tambaram Chennai</title>
-        <meta
-          name="description"
-          content="Explore the best bridal makeup transformations in Tambaram, Chennai. View HD makeup, airbrush bridal looks, saree draping styles, mehandi art, and pre-wedding shoot highlights by Suji Hair & Makeup."
-        />
-        <meta
-          name="keywords"
-          content="Bridal Makeup Chennai, HD Makeup Tambaram, Airbrush Makeup Artist, Saree Draping Chennai, Pre-wedding Makeup Chennai, Mehandi Tambaram, Bridal Hair Styling, Reception Makeup Chennai, Best Bridal Artist Chennai"
-        />
+        <meta name="description" content="Explore the best bridal makeup transformations in Tambaram, Chennai. View HD makeup, airbrush bridal looks, saree draping styles, mehandi art, and pre-wedding shoot highlights by Suji Hair & Makeup." />
+        <meta name="keywords" content="Bridal Makeup Chennai, HD Makeup Tambaram, Airbrush Makeup Artist, Saree Draping Chennai, Pre-wedding Makeup Chennai, Mehandi Tambaram, Bridal Hair Styling, Reception Makeup Chennai, Best Bridal Artist Chennai" />
         <link rel="canonical" href="https://sujihairandmakeup.com/gallery" />
-        <script type="application/ld+json">
-          {`
-            {
-              "@context": "https://schema.org",
-              "@type": "WebPage",
-              "name": "Gallery",
-              "url": "https://sujihairandmakeup.com/gallery",
-              "breadcrumb": {
-                "@type": "BreadcrumbList",
-                "itemListElement": [
-                  {
-                    "@type": "ListItem",
-                    "position": 1,
-                    "name": "Home",
-                    "item": "https://sujihairandmakeup.com"
-                  },
-                  {
-                    "@type": "ListItem",
-                    "position": 2,
-                    "name": "Gallery",
-                    "item": "https://sujihairandmakeup.com/gallery"
-                  }
-                ]
-              }
-            }
-          `}
-        </script>
+        <script type="application/ld+json">{`
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Gallery",
+      "url": "https://sujihairandmakeup.com/gallery",
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://sujihairandmakeup.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Gallery",
+            "item": "https://sujihairandmakeup.com/gallery"
+          }
+        ]
+      }
+    }
+  `}</script>
       </Helmet>
 
       {/* Hero Section with Curved Floating Gallery */}

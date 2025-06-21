@@ -6,6 +6,8 @@ import Services from '../components/Services';
 import Gallery from '../components/Gallery';
 import Contact from '../components/Contact';
 import Footer from '../components/footer';
+import ChatBot from '../components/chatbot';
+
 
 
 
@@ -13,6 +15,7 @@ export default function HomeContainer() {
     return (
         <Router>
             <Navbar />
+            <ChatBot />
             <Routes>
                 <Route path="/" element={<Hero />} />
                 <Route path="/about" element={<About />} />

@@ -23,10 +23,17 @@ export default function Navbar() {
 
   const currentTitle = pageTitles[location.pathname] || "";
 
-  const navLinkClass: NavLinkProps["className"] = ({ isActive }) =>
-    isActive
-      ? "text-white font-semibold bg-white/10 px-4 py-1.5 rounded-full"
-      : "text-white hover:bg-white/10 hover:px-4 hover:py-1.5 hover:rounded-full transition-all duration-300";
+  const useNavLinkClass = () => {
+    const location = useLocation();
+
+    return (path: string) =>
+      location.pathname === path
+        ? "text-white font-semibold bg-white/10 px-4 py-1.5 rounded-full"
+        : "text-white hover:bg-white/10 hover:px-4 hover:py-1.5 hover:rounded-full transition-all duration-300";
+  };
+
+  const navLinkClass = useNavLinkClass();
+
 
   const handleMobileNavClick = () => setIsOpen(false);
 
@@ -63,11 +70,11 @@ export default function Navbar() {
 
             {/* Center: Nav Links */}
             <div className="flex-1 flex justify-center items-center gap-6 text-base font-medium">
-              <NavLink to="/" className={navLinkClass}>Home</NavLink>
-              <NavLink to="/about" className={navLinkClass}>Why Us ?</NavLink>
-              <NavLink to="/gallery" className={navLinkClass}>Gallery</NavLink>
-              <NavLink to="/services" className={navLinkClass}>Services</NavLink>
-              <NavLink to="/contact" className={navLinkClass}>Contact</NavLink>
+              <Link to="/" className={navLinkClass("/")}>Home</Link>
+              <Link to="/about" className={navLinkClass("/about")}>Why Us ?</Link>
+              <Link to="/gallery" className={navLinkClass("/gallery")}>Gallery</Link>
+              <Link to="/services" className={navLinkClass("/services")}>Services</Link>
+              <Link to="/contact" className={navLinkClass("/contact")}>Contact</Link>
             </div>
 
             {/* Right: Say Hello Button */}
@@ -76,7 +83,7 @@ export default function Navbar() {
                 <div className="relative z-10 rounded-full bg-black px-5 py-1.5 text-white text-sm font-medium flex items-center justify-center">
                   Say Hello
                 </div>
-                <div className="absolute inset-0 rounded-full p-[2px] bg-white group-hover:bg-gradient-to-r from-cyan-400 via-pink-500 to-orange-400 transition-transform duration-300 group-hover:scale-105"></div>
+                <div className="absolute inset-0 rounded-full p-[2px] bg-white group-hover:bg-gradient-to-r from-cyan-400 via-pink-500 to-orange-400 transition-transform duration-300 scale-105"></div>
               </Link>
             </div>
           </div>
@@ -87,11 +94,11 @@ export default function Navbar() {
       {isOpen && (
         <div className="fixed top-[100px] left-1/2 transform -translate-x-1/2 w-[90%] max-w-6xl bg-black/90 rounded-xl text-center py-4 z-40 md:hidden shadow-xl">
           <ul className="space-y-4 text-white text-base font-medium">
-            <li><NavLink to="/" className={navLinkClass} onClick={handleMobileNavClick}>Home</NavLink></li>
-            <li><NavLink to="/about" className={navLinkClass} onClick={handleMobileNavClick}>Why Us ?</NavLink></li>
-            <li><NavLink to="/gallery" className={navLinkClass} onClick={handleMobileNavClick}>Gallery</NavLink></li>
-            <li><NavLink to="/services" className={navLinkClass} onClick={handleMobileNavClick}>Our Services</NavLink></li>
-            <li><NavLink to="/contact" className={navLinkClass} onClick={handleMobileNavClick}>Contact Us</NavLink></li>
+            <li><Link to="/" className={navLinkClass("/")} onClick={handleMobileNavClick}>Home</Link></li>
+            <li><Link to="/about" className={navLinkClass("/about")} onClick={handleMobileNavClick}>Why Us ?</Link></li>
+            <li><Link to="/gallery" className={navLinkClass("/gallery")} onClick={handleMobileNavClick}>Gallery</Link></li>
+            <li><Link to="/services" className={navLinkClass("/services")} onClick={handleMobileNavClick}>Our Services</Link></li>
+            <li><Link to="/contact" className={navLinkClass("/contact")} onClick={handleMobileNavClick}>Contact Us</Link></li>
           </ul>
 
           {/* Social Icons */}
@@ -100,7 +107,7 @@ export default function Navbar() {
             <a className="bg-white p-1 rounded" href="https://www.instagram.com/sujihairandmakeup/" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
             <a className="bg-white p-1 rounded" href="https://www.youtube.com/@sujihairandmakeup"><FaYoutube /></a>
             <a className="bg-white p-1 rounded" href="mailto:sujihairandmakeup@gmail.com"><MdEmail /></a>
-            <a className="bg-white p-1 rounded" href="https://wa.me/9941492115" target="_blank" rel="noopener noreferrer"><IoLogoWhatsapp /></a>
+            <a className="bg-white p-1 rounded" href="https://wa.me/7305931283" target="_blank" rel="noopener noreferrer"><IoLogoWhatsapp /></a>
           </div>
         </div>
       )}

@@ -23,10 +23,10 @@ const hostname = "https://sujihairandmakeup.com";
 // Define your site pages
 const pages = [
   { url: "/", changefreq: "daily", priority: 1.0 },
-  { url: "/about", changefreq: "monthly", priority: 0.8 },
-  { url: "/gallery", changefreq: "monthly", priority: 0.8 },
-  { url: "/portfolio", changefreq: "monthly", priority: 0.8 },
-  { url: "/contact", changefreq: "yearly", priority: 0.5 },
+  { url: "/about", changefreq: "daily", priority: 0.8 },
+  { url: "/gallery", changefreq: "daily", priority: 0.8 },
+  { url: "/services", changefreq: "daily", priority: 0.8 },
+  { url: "/contact", changefreq: "daily", priority: 0.5 },
 ];
 
 (async () => {

@@ -75,12 +75,28 @@ export default function Contact() {
 
   return (
     <>
-      <Helmet>
-        <title>Contact Suji Hair & Makeup | Book Your Bridal Makeup in Chennai</title>
-        <meta name="description" content="Get in touch with Suji Hair & Makeup for bridal bookings, makeup trials, and consultations in Chennai. Call or WhatsApp now!" />
-        <meta name="keywords" content="contact bridal makeup artist, book makeup Chennai, makeup appointment Chennai, Suji Hair and Makeup contact" />
-        <link rel="canonical" href="https://sujihairandmakeup.com/contact" />
-      </Helmet>
+     <Helmet>
+  <title>Contact Suji Hair & Makeup | Book Your Bridal Makeup in Chennai</title>
+  <meta name="description" content="Get in touch with Suji Hair & Makeup for bridal bookings, makeup trials, and consultations in Chennai. Call or WhatsApp now!" />
+  <meta name="keywords" content="contact bridal makeup artist, book makeup Chennai, makeup appointment Chennai, Suji Hair and Makeup contact" />
+  <link rel="canonical" href="https://sujihairandmakeup.com/contact" />
+  <script type="application/ld+json">{`
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "url": "https://sujihairandmakeup.com/contact",
+      "mainEntity": {
+        "@type": "Organization",
+        "name": "Suji Hair & Makeup",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+91-XXXXXXXXXX",
+          "contactType": "Customer Service"
+        }
+      }
+    }
+  `}</script>
+</Helmet>
 
       <div className="py-24 bg-[#f9fafb] px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-10 items-stretch">
@@ -168,7 +184,7 @@ export default function Contact() {
                 <Phone className="text-pink-600" />
                 <div>
                   <h4 className="font-semibold">Phone</h4>
-                  <a href="tel:+919941492115" className="text-sm text-gray-600">+91 9941492115</a>
+                  <a href="tel:+919941492115" className="text-sm text-gray-600">+91 9941492115 / 7305931283</a>
                 </div>
               </div>
               <div className="flex items-start space-x-3">

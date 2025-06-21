@@ -15,42 +15,34 @@ export default function About() {
     <>
       <Helmet>
         <title>Why Choose Us? Suji Hair & Makeup | Top-Rated Bridal Artist in Chennai</title>
-        <meta
-          name="description"
-          content="Learn about Suji, a professional bridal makeup artist in Chennai with 10+ years of experience in bridal beauty, mehandi, and saree draping."
-        />
-        <meta
-          name="keywords"
-          content="about Suji makeup artist, bridal makeup experience, Chennai makeup artist profile, trusted makeup artist Chennai"
-        />
+        <meta name="description" content="Learn about Suji, a professional bridal makeup artist in Chennai with 10+ years of experience in bridal beauty, mehandi, and saree draping." />
+        <meta name="keywords" content="about Suji makeup artist, bridal makeup experience, Chennai makeup artist profile, trusted makeup artist Chennai" />
         <link rel="canonical" href="https://www.sujihairandmakeup.com/about" />
-        <script type="application/ld+json">
-          {`
-            {
-              "@context": "https://schema.org",
-              "@type": "WebPage",
-              "name": "About Us",
-              "url": "https://sujihairandmakeup.com/about",
-              "breadcrumb": {
-                "@type": "BreadcrumbList",
-                "itemListElement": [
-                  {
-                    "@type": "ListItem",
-                    "position": 1,
-                    "name": "Home",
-                    "item": "https://sujihairandmakeup.com"
-                  },
-                  {
-                    "@type": "ListItem",
-                    "position": 2,
-                    "name": "About Us",
-                    "item": "https://sujihairandmakeup.com/about"
-                  }
-                ]
-              }
-            }
-          `}
-        </script>
+        <script type="application/ld+json">{`
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "About Us",
+      "url": "https://sujihairandmakeup.com/about",
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://sujihairandmakeup.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "About Us",
+            "item": "https://sujihairandmakeup.com/about"
+          }
+        ]
+      }
+    }
+  `}</script>
       </Helmet>
 
       {/* Hero Section */}
