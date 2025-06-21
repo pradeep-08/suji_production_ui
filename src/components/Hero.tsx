@@ -95,7 +95,7 @@ export default function Hero() {
     },
     {
       id: "2",
-      tag: "Popular",
+      tag: "⭐ Popular",
       url: newImg2,
       gallery: [newImg2, newImg3, newImg6, newImg4],
       icon: "newImg2",
@@ -108,7 +108,7 @@ export default function Hero() {
     },
     {
       id: "3",
-      tag: "💸 Budget Friendly",
+      tag: "Budget Friendly",
       url: newImg3,
       gallery: [newImg3, newImg3, newImg6, newImg4],
       icon: "/icons/saree.svg",
@@ -121,7 +121,7 @@ export default function Hero() {
     },
     {
       id: "4",
-      tag: "🔥 New",
+      tag: "New",
       url: newImg4,
       gallery: [newImg10, newImg3, newImg6, newImg4],
       icon: "/icons/scissors.svg",
@@ -134,7 +134,7 @@ export default function Hero() {
     },
     {
       id: "5",
-      tag: "✨Most Preferred",
+      tag: "Most Preferred",
       url: newImg12,
       gallery: [newImg12, newImg10, newImg6, newImg4],
       icon: "/icons/scissors.svg",
@@ -160,7 +160,7 @@ export default function Hero() {
     },
     {
       id: "7",
-      tag: "🔥 New",
+      tag: "New",
       url: newImg7,
       gallery: [newImg7, newImg3, newImg6, newImg4],
       icon: "/icons/scissors.svg",
@@ -186,7 +186,7 @@ export default function Hero() {
     },
     {
       id: "9",
-      tag: "Popular",
+      tag: "⭐ Popular",
       url: newImg9,
       gallery: [newImg9, newImg3, newImg6, newImg4],
       icon: "/icons/scissors.svg",
@@ -199,7 +199,7 @@ export default function Hero() {
     },
     {
       id: "10",
-      tag: "🔥 New",
+      tag: "New",
       url: newImg1,
       gallery: [newImg1, newImg3, newImg6, newImg4],
       icon: "/icons/scissors.svg",
@@ -394,20 +394,20 @@ export default function Hero() {
   return (
     <>
       {/* Helmet for SEO & Social Sharing */}
-      <Helmet>
+      {/* <Helmet>
         <title>Top Bridal Makeup Artist in Chennai | Suji Hair & Makeup</title>
         <meta name="description" content="Top bridal makeup artist in Chennai. Suji offers HD bridal makeup, mehandi, and saree draping for weddings, receptions, and all special occasions." />
         <meta name="keywords" content="bridal makeup Chennai, best makeup artist Chennai, HD bridal makeup, saree draping artist, Chennai mehandi service, party makeup, wedding makeup Chennai, Suji Hair and Makeup" />
         <meta name="author" content="Suji Hair & Makeup" />
         <link rel="canonical" href="https://sujihairandmakeup.com/" />
-        {/* Open Graph (Facebook) */}
+       
         <meta property="og:title" content="Suji Hair & Makeup | Bridal Makeup Artist in Chennai" />
         <meta property="og:description" content="Get stunning bridal makeup, mehandi designs, and perfect saree draping for your big day. Book Suji Hair & Makeup now!" />
         <meta property="og:image" content={hero} />
         <meta property="og:url" content="https://sujihairandmakeup.com/" />
         <meta property="og:type" content="website" />
         <meta name="robots" content="max-image-preview:large" />
-        {/* Twitter Card */}
+  
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Suji Hair & Makeup | Best Bridal Makeup Artist in Chennai" />
         <meta name="twitter:description" content="Professional bridal makeup, traditional mehandi, and saree draping services in Chennai. Book now!" />
@@ -426,8 +426,36 @@ export default function Hero() {
     }
     `}
         </script>
+      </Helmet> */}
+      <Helmet>
+        <title>Top Bridal Makeup Artist in Chennai | Suji Hair & Makeup</title>
+        <meta name="description" content="Top bridal makeup artist in Chennai. Suji offers HD bridal makeup, mehandi, and saree draping for weddings, receptions, and all special occasions." />
+        <meta name="keywords" content="bridal makeup Chennai, best makeup artist Chennai, HD bridal makeup, saree draping artist, Chennai mehandi service, party makeup, wedding makeup Chennai, Suji Hair and Makeup" />
+        <meta name="author" content="Suji Hair & Makeup" />
+        <link rel="canonical" href="https://sujihairandmakeup.com/" />
+        <meta property="og:title" content="Suji Hair & Makeup | Bridal Makeup Artist in Chennai" />
+        <meta property="og:description" content="Get stunning bridal makeup, mehandi designs, and perfect saree draping for your big day. Book Suji Hair & Makeup now!" />
+        <meta property="og:image" content={hero} />
+        <meta property="og:url" content="https://sujihairandmakeup.com/" />
+        <meta property="og:type" content="website" />
+        <meta name="robots" content="max-image-preview:large" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Suji Hair & Makeup | Best Bridal Makeup Artist in Chennai" />
+        <meta name="twitter:description" content="Professional bridal makeup, traditional mehandi, and saree draping services in Chennai. Book now!" />
+        <script type="application/ld+json">{`
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Suji Hair & Makeup",
+      "url": "https://sujihairandmakeup.com",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://sujihairandmakeup.com/?s={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+  `}</script>
       </Helmet>
-
 
       {/* Hero Section */}
       <div
@@ -588,7 +616,7 @@ export default function Hero() {
                     </span>
                   </div>
                   <div className="text-pink-600 font-bold text-2xl mb-6">
-                    {expandedService.price} 
+                    {expandedService.price}
                   </div>
                   <a href="/contact"><div className="flex space-x-4">
                     <button className="flex-1 bg-pink-600 text-white hover:bg-pink-700 py-3 rounded">
@@ -696,7 +724,7 @@ export default function Hero() {
                     key={i}
                     size={20}
                     className={
-                      i < t.rating ? "text-green-500 fill-green-500" : "text-gray-300"
+                      i < t.rating ? "text-yellow-500 fill-yellow-500" : "text-gray-300"
                     }
                     fill={i < t.rating ? "currentColor" : "none"}
                   />

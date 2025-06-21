@@ -86,7 +86,7 @@ const ChatBot: React.FC = () => {
       ) : (
         <button
           onClick={() => setIsOpen(true)}
-          className="bg-teal-600 text-white p-3 rounded-full shadow-lg hover:bg-teal-700 transition"
+          className="bg-pink-500 text-white p-3 rounded-full shadow-lg hover:bg-pink-700 transition"
         >
           <MessageCircle className="w-5 h-5" />
         </button>
