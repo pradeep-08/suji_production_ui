@@ -36,6 +36,7 @@ const allImages = [
 
 export default function Gallery() {
   useEffect(() => {
+     window.scrollTo(0, 0);
     AOS.init({ duration: 1500 });
   }, []);
 

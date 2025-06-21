@@ -6,7 +6,8 @@ import Services from '../components/Services';
 import Gallery from '../components/Gallery';
 import Contact from '../components/Contact';
 import Footer from '../components/footer';
-import ChatBot from '../components/chatbot';
+import ChatBot from '../components/Chatbot';
+import NotFound from '../components/NotFound';
 
 
 
@@ -22,6 +23,7 @@ export default function HomeContainer() {
                 <Route path="/services" element={<Services />} />
                 <Route path="/gallery" element={<Gallery />} />
                 <Route path="/contact" element={<Contact />} />
+                 <Route path="*" element={<NotFound />} />
             </Routes>
             <Footer />
         </Router>

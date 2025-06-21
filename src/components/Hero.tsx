@@ -45,6 +45,7 @@ export interface Service {
 }
 export default function Hero() {
   useEffect(() => {
+    window.scrollTo(0, 0);
     AOS.init({ duration: 2000 });
   }, []);
   const [expandedService, setExpandedService] = useState<Service | null>(null);
@@ -86,7 +87,7 @@ export default function Hero() {
       gallery: [newImg10, newImg3, newImg6, newImg4],
       icon: "/icons/crown.svg",
       title: "Air Brush Makeup",
-      price: "₹10,000/-",
+      price: "₹35,000 – ₹45,000",
       rating: "5.0",
       reviews: "12 Reviews",
       category: "Bridal Makeup",
@@ -95,12 +96,12 @@ export default function Hero() {
     },
     {
       id: "2",
-      tag: "⭐ Popular",
+      tag: "Popular",
       url: newImg2,
       gallery: [newImg2, newImg3, newImg6, newImg4],
-      icon: "newImg2",
+      icon: "/icons/saree.svg",
       title: "Mugurtham Makeup",
-      price: "₹2,500 - ₹5,000",
+      price: "₹9,000 – ₹12,000",
       rating: "4.9",
       reviews: "28 Reviews",
       category: "Mehndi Artist",
@@ -108,12 +109,12 @@ export default function Hero() {
     },
     {
       id: "3",
-      tag: "Budget Friendly",
+      tag: "💸 Budget Friendly",
       url: newImg3,
       gallery: [newImg3, newImg3, newImg6, newImg4],
       icon: "/icons/saree.svg",
       title: "Engagement Basic Makeup",
-      price: "₹800 - ₹1,500",
+      price: "₹7,000 – ₹9,000",
       rating: "4.7",
       reviews: "35 Reviews",
       category: "Saree Styling",
@@ -121,12 +122,12 @@ export default function Hero() {
     },
     {
       id: "4",
-      tag: "New",
+      tag: "🔥 New",
       url: newImg4,
       gallery: [newImg10, newImg3, newImg6, newImg4],
       icon: "/icons/scissors.svg",
       title: "Engagement Look",
-      price: "₹1,200 - ₹3,000",
+      price: "₹7,500 – ₹10,000",
       rating: "4.8",
       reviews: "8 Reviews",
       category: "Hair Services",
@@ -134,12 +135,12 @@ export default function Hero() {
     },
     {
       id: "5",
-      tag: "Most Preferred",
+      tag: "✨Most Preferred",
       url: newImg12,
       gallery: [newImg12, newImg10, newImg6, newImg4],
       icon: "/icons/scissors.svg",
       title: "Saree Draping",
-      price: "₹1,200 - ₹3,000",
+      price: "₹499 – ₹1,000",
       rating: "4.8",
       reviews: "8 Reviews",
       category: "Hair Services",
@@ -152,7 +153,7 @@ export default function Hero() {
       gallery: [newImg6, newImg3, newImg6, newImg4],
       icon: "/icons/scissors.svg",
       title: "Mugurtham Hairstyle",
-      price: "₹1,200 - ₹3,000",
+      price: "₹2,000 – ₹3,000",
       rating: "4.8",
       reviews: "8 Reviews",
       category: "Hair Services",
@@ -160,12 +161,12 @@ export default function Hero() {
     },
     {
       id: "7",
-      tag: "New",
+      tag: "🔥 New",
       url: newImg7,
       gallery: [newImg7, newImg3, newImg6, newImg4],
       icon: "/icons/scissors.svg",
       title: "Pre-Wedding Shoot",
-      price: "₹1,200 - ₹3,000",
+      price: "₹5,000 – ₹7,000",
       rating: "4.8",
       reviews: "8 Reviews",
       category: "Hair Services",
@@ -178,7 +179,7 @@ export default function Hero() {
       gallery: [newImg8, newImg3, newImg6, newImg4],
       icon: "/icons/scissors.svg",
       title: "Pre-Wedding Shoot",
-      price: "₹1,200 - ₹3,000",
+      price: "₹6,000 – ₹8,000",
       rating: "4.8",
       reviews: "8 Reviews",
       category: "Hair Services",
@@ -186,12 +187,12 @@ export default function Hero() {
     },
     {
       id: "9",
-      tag: "⭐ Popular",
+      tag: "Popular",
       url: newImg9,
       gallery: [newImg9, newImg3, newImg6, newImg4],
       icon: "/icons/scissors.svg",
       title: "HD Makeup",
-      price: "₹1,200 - ₹3,000",
+      price: "₹12,000 – ₹16,000",
       rating: "4.8",
       reviews: "8 Reviews",
       category: "Hair Services",
@@ -199,12 +200,12 @@ export default function Hero() {
     },
     {
       id: "10",
-      tag: "New",
+      tag: "🔥 New",
       url: newImg1,
       gallery: [newImg1, newImg3, newImg6, newImg4],
       icon: "/icons/scissors.svg",
       title: "Puberty Makeup",
-      price: "₹1,200 - ₹3,000",
+      price: "₹5,000 – ₹7,000",
       rating: "4.8",
       reviews: "8 Reviews",
       category: "Hair Services",
@@ -217,7 +218,7 @@ export default function Hero() {
       gallery: [newImg5, newImg3, newImg6, newImg4],
       icon: "/icons/scissors.svg",
       title: "Maternity",
-      price: "₹1,200 - ₹3,000",
+      price: "₹5,000 – ₹7,000",
       rating: "4.8",
       reviews: "8 Reviews",
       category: "Hair Services",
@@ -230,13 +231,14 @@ export default function Hero() {
       gallery: [newImg11, newImg3, newImg6, newImg4],
       icon: "/icons/scissors.svg",
       title: "Meganthi",
-      price: "₹1,200 - ₹3,000",
+      price: "₹5,000 – ₹7,000",
       rating: "4.8",
       reviews: "8 Reviews",
       category: "Hair Services",
       description: "Traditional makeup and hairstyling for South Indian meganthi ceremonies"
     }
   ];
+
 
   const recommendations = services.slice(0, 3);
 
@@ -352,19 +354,19 @@ export default function Hero() {
 
 
   const imageSlides = [
-    { title: "Air Brush Makeup", url: newImg10 },
-    { title: "Mugurtham Makeup", url: newImg2 },
-    { title: "Engagement Basic Makeup", url: newImg3 },
-    { title: "Reception Hairstyle", url: newImg4 },
-    { title: "Saree Draping", url: newImg12 },
-    { title: "Mugurtham Hairstyle", url: newImg6 },
-    { title: "Engagement Look", url: newImg7 },
-    { title: "Pre-Wedding Shoot", url: newImg8 },
-    { title: "HD Makeup", url: newImg9 },
-    { title: "Puberty Makeup", url: newImg1 },
-    { title: "Maternity", url: newImg5 },
-    { title: "Meganthi", url: newImg11 },
-    { title: "Others", url: hero }
+    { title: "Airbrush Bridal Makeup in Chennai", url: newImg10 }, // Air Brush Makeup
+    { title: "Traditional Mugurtham Bridal Makeup Look", url: newImg2 }, // Mugurtham Makeup
+    { title: "Simple Engagement Makeup for Brides", url: newImg3 }, // Engagement Basic Makeup
+    { title: "Elegant Reception Hairstyle for Indian Brides", url: newImg4 }, // Reception Hairstyle
+    { title: "Perfect Saree Draping for Wedding Functions", url: newImg12 }, // Saree Draping
+    { title: "Mugurtham Bridal Hairstyle Inspiration", url: newImg6 }, // Mugurtham Hairstyle
+    { title: "Gorgeous Engagement Bridal Look", url: newImg7 }, // Engagement Look
+    { title: "Pre-Wedding Shoot Makeup and Styling", url: newImg8 }, // Pre-Wedding Shoot
+    { title: "HD Bridal Makeup for Photoshoot", url: newImg9 }, // HD Makeup
+    { title: "Traditional Puberty Makeup for Girls", url: newImg1 }, // Puberty Makeup
+    { title: "Maternity Photoshoot Makeup Look", url: newImg5 }, // Maternity
+    { title: "Mehendi / Meganthi Ceremony Bridal Look", url: newImg11 }, // Meganthi
+    { title: "Bridal Makeup and Hairstyling Portfolio", url: hero } // Others
   ];
   const [selectedMakeup, setSelectedMakeup] = useState("");
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -481,7 +483,7 @@ export default function Hero() {
               Professional makeup, traditional mehandi designs, and elegant
               saree draping services for all your special occasions.
             </p>
-            <a href="#contact">
+            <a href="/contact">
               <button
                 data-aos="slide-up"
                 className="bg-pink-600 text-white px-8 py-3 rounded-md hover:bg-pink-700 transition flex items-center space-x-4 animate-blinkWave "
@@ -549,12 +551,13 @@ export default function Hero() {
                     >
                       Details
                     </button>
-                    <a href="/contact">
+                    <a href={`/contact?service=${encodeURIComponent(service.title)}`}>
                       <button className="flex items-center justify-center flex-1 bg-pink-600 hover:bg-pink-700 text-white py-2 px-4 rounded transition-colors gap-2">
                         <LuCalendarArrowUp className="h-5 w-5" />
                         Book Now
                       </button>
                     </a>
+
                   </div>
                 </div>
               </div>
@@ -565,7 +568,7 @@ export default function Hero() {
             <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4 overflow-y-auto">
               <div className="bg-white rounded-xl shadow-lg w-full max-w-6xl relative flex flex-col md:flex-row overflow-hidden">
                 <button
-                  className="absolute top-4 right-4 text-gray-600 hover:text-black text-2xl z-10"
+                  className="absolute top-4 right-4 text-white mix-blend-difference text-2xl z-10"
                   onClick={() => setExpandedService(null)}
                 >
                   &times;
@@ -618,14 +621,16 @@ export default function Hero() {
                   <div className="text-pink-600 font-bold text-2xl mb-6">
                     {expandedService.price}
                   </div>
-                  <a href="/contact"><div className="flex space-x-4">
-                    <button className="flex-1 bg-pink-600 text-white hover:bg-pink-700 py-3 rounded">
-                      View contact
+                  <a href={`/contact?service=${encodeURIComponent(expandedService.title)}`}><div className="flex space-x-4">
+                    <button className="flex items-center justify-center flex-1 bg-pink-600 hover:bg-pink-700 text-white py-2 px-4 rounded transition-colors gap-2">
+                      <LuCalendarArrowUp className="h-5 w-5" />
+                      Book Now
                     </button>
+
                   </div></a>
                   {/* Recommendations */}
                   {expandedService && (
-                    <div className="bg-white mt-6 rounded-lg max-w-6xl w-full">
+                    <div className="hidden md:block bg-white mt-6 rounded-lg max-w-6xl w-full">
                       <div className="flex justify-between items-center mb-4">
                         <h4 className="text-xl font-bold">You may also like</h4>
                         <a href="#" className="text-pink-600 font-semibold text-sm">View all →</a>
@@ -657,6 +662,7 @@ export default function Hero() {
                       </div>
                     </div>
                   )}
+
                 </div>
 
               </div>
@@ -664,8 +670,8 @@ export default function Hero() {
 
             </div>
           )}
-        </div>
-      </div>
+        </div >
+      </div >
       <div data-aos="slide-right" id="about" className="  pt-24">
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

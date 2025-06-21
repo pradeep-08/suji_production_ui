@@ -8,6 +8,7 @@ import aboutHero from "../img/About/image.png";
 
 export default function About() {
   useEffect(() => {
+     window.scrollTo(0, 0);
     AOS.init({ duration: 1200, once: true });
   }, []);
 

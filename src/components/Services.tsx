@@ -54,6 +54,7 @@ const originalBlocks = [
 
 export default function GalleryShowcase() {
   useEffect(() => {
+     window.scrollTo(0, 0);
     AOS.init({ duration: 1200 });
   }, []);
 

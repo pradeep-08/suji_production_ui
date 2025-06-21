@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { Phone, Mail, MapPin, CheckCircle } from "lucide-react";
 import AOS from "aos";
 import { Helmet } from "react-helmet-async";
@@ -54,6 +55,7 @@ export default function Contact() {
   const [autoSlide, setAutoSlide] = useState(true);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     AOS.init({ duration: 2000 });
 
     if (!autoSlide) return;
@@ -63,6 +65,10 @@ export default function Contact() {
     return () => clearInterval(interval);
   }, [autoSlide]);
 
+  const useQuery = () => {
+    return new URLSearchParams(useLocation().search);
+  };
+  const query = useQuery();
   useEffect(() => {
     if (selectedMakeup) {
       const index = imageSlides.findIndex((img) => img.title === selectedMakeup);
@@ -73,14 +79,21 @@ export default function Contact() {
     }
   }, [selectedMakeup]);
 
+  useEffect(() => {
+    const serviceFromQuery = query.get("service");
+    if (serviceFromQuery && !selectedMakeup) {
+      setSelectedMakeup(serviceFromQuery);
+    }
+  }, []);
+
   return (
     <>
-     <Helmet>
-  <title>Contact Suji Hair & Makeup | Book Your Bridal Makeup in Chennai</title>
-  <meta name="description" content="Get in touch with Suji Hair & Makeup for bridal bookings, makeup trials, and consultations in Chennai. Call or WhatsApp now!" />
-  <meta name="keywords" content="contact bridal makeup artist, book makeup Chennai, makeup appointment Chennai, Suji Hair and Makeup contact" />
-  <link rel="canonical" href="https://sujihairandmakeup.com/contact" />
-  <script type="application/ld+json">{`
+      <Helmet>
+        <title>Contact Suji Hair & Makeup | Book Your Bridal Makeup in Chennai</title>
+        <meta name="description" content="Get in touch with Suji Hair & Makeup for bridal bookings, makeup trials, and consultations in Chennai. Call or WhatsApp now!" />
+        <meta name="keywords" content="contact bridal makeup artist, book makeup Chennai, makeup appointment Chennai, Suji Hair and Makeup contact" />
+        <link rel="canonical" href="https://sujihairandmakeup.com/contact" />
+        <script type="application/ld+json">{`
     {
       "@context": "https://schema.org",
       "@type": "ContactPage",
@@ -90,13 +103,13 @@ export default function Contact() {
         "name": "Suji Hair & Makeup",
         "contactPoint": {
           "@type": "ContactPoint",
-          "telephone": "+91-XXXXXXXXXX",
+          "telephone": "+91-7305931283",
           "contactType": "Customer Service"
         }
       }
     }
   `}</script>
-</Helmet>
+      </Helmet>
 
       <div className="py-24 bg-[#f9fafb] px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-10 items-stretch">
@@ -127,15 +140,19 @@ export default function Contact() {
                   <label className="block text-sm font-medium text-gray-700">Select Makeup Service</label>
                   <select
                     name="Makeup Type"
-                    className="w-full mt-1 px-3 py-2 border rounded-md focus:border-green-500 focus:ring-green-500"
+                    className={`w-full mt-1 px-3 py-2 border rounded-md outline-none focus:border-green-500 focus:ring-green-500 ${selectedMakeup ? "border-green-500" : "border-gray-300"
+                      }`}
                     value={selectedMakeup}
                     onChange={(e) => setSelectedMakeup(e.target.value)}
                   >
                     <option value="">-- Please select --</option>
                     {makeupOptions.map((option, index) => (
-                      <option key={index} value={option}>{option}</option>
+                      <option key={index} value={option}>
+                        {option}
+                      </option>
                     ))}
                   </select>
+
                 </div>
                 <div>
                   <label className="block text-sm font-medium text-gray-700">Message</label>
