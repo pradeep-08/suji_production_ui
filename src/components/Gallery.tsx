@@ -17,9 +17,14 @@ import newImg10 from "../img/new/10.jpeg";
 import newImg11 from "../img/new/11.jpeg";
 import newImg12 from "../img/new/12.jpeg";
 
+
 const curvedImages = [newImg1, newImg2, newImg3, newImg4, newImg5];
 
-const allImages = [
+type ImageItem = {
+  url: string;
+  title: string;
+};
+const allImages: ImageItem[] = [
   { url: newImg10, title: "Air Brush Makeup" },
   { url: newImg2, title: "Mugurtham Makeup" },
   { url: newImg3, title: "Engagement Basic Makeup" },
@@ -36,7 +41,7 @@ const allImages = [
 
 export default function Gallery() {
   useEffect(() => {
-     window.scrollTo(0, 0);
+    window.scrollTo(0, 0);
     AOS.init({ duration: 1500 });
   }, []);
 
@@ -88,7 +93,7 @@ export default function Gallery() {
           {curvedImages.map((img, index) => (
             <a
               key={index}
-              href="/contact"
+              href={`/contact?service=${encodeURIComponent(img.title)}`}
               className="relative overflow-hidden transform skew-y-[1.5deg] rounded-2xl transition-all hover:scale-105 hover:shadow-2xl group w-[160px] sm:w-[180px] md:w-[200px] lg:w-[220px] h-[280px] sm:h-[300px] md:h-[320px]"
               style={{
                 zIndex: 10 - index,

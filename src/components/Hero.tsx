@@ -113,7 +113,7 @@ export default function Hero() {
       url: newImg3,
       gallery: [newImg3, newImg3, newImg6, newImg4],
       icon: "/icons/saree.svg",
-      title: "Engagement Basic Makeup",
+      title: "Basic Makeup",
       price: "₹7,000 – ₹9,000",
       rating: "4.7",
       reviews: "35 Reviews",
@@ -165,7 +165,7 @@ export default function Hero() {
       url: newImg7,
       gallery: [newImg7, newImg3, newImg6, newImg4],
       icon: "/icons/scissors.svg",
-      title: "Pre-Wedding Shoot",
+      title: "Engagement Basic makeup",
       price: "₹5,000 – ₹7,000",
       rating: "4.8",
       reviews: "8 Reviews",
@@ -289,59 +289,78 @@ export default function Hero() {
   const testimonials = [
     {
       name: "Anitha Ramesh",
-      username: "radiant_beauty_01",
+      username: "anitha.ramesh",
+      profile: "https://ui-avatars.com/api/?name=Anitha+Ramesh&background=random",
       rating: 5,
       review:
         "She did my makeup and hair so well for my wedding. Everyone said I looked amazing. Thank you!",
     },
     {
       name: "Karthika Ravi",
-      username: "makeup_muse_22",
+      username: "karthika.ravi",
+      profile: "https://ui-avatars.com/api/?name=Karthika+Ravi&background=random",
       rating: 4,
       review:
         "Good hair styling and soft makeup. It stayed perfect the whole day. I'm happy with the service.",
     },
     {
       name: "Deepika Natarajan",
-      username: "glam_goddess_90",
+      username: "deepika.n",
+      profile: "https://ui-avatars.com/api/?name=Deepika+Natarajan&background=random",
       rating: 5,
       review:
         "Very professional and friendly. My engagement look came out so beautiful. Highly recommend.",
     },
     {
       name: "Meena Kumar",
-      username: "bridal_bliss_33",
+      username: "meena.k",
+      profile: "https://ui-avatars.com/api/?name=Meena+Kumar&background=random",
       rating: 4,
       review:
         "Nice work! She gave me a natural glow look which I really loved. My photos came out great too.",
     },
     {
       name: "Revathi Srinivasan",
-      username: "flawless_finish_05",
+      username: "revathi.s_78",
+      profile: "https://ui-avatars.com/api/?name=Revathi+Srinivasan&background=random",
       rating: 5,
       review:
         "The hair bun and eye makeup were perfect. I looked just how I imagined. So glad I chose her.",
     },
     {
       name: "Lakshmi Narayan",
-      username: "elegant_glow_78",
+      username: "lakshmi.n_18",
+      profile: "https://ui-avatars.com/api/?name=Lakshmi+Narayan&background=random",
       rating: 4,
       review:
         "My party makeup and hair were done nicely. Everyone complimented me. Thank you for the great work!",
     },
   ];
 
-  function getDynamicDate(index: number) {
+
+  function getDynamicDate(index: number): string {
     const today = new Date();
-    const monthsAgo = today.getMonth() - (index % 2 === 0 ? 1 : 2);
-    const reviewDate = new Date(today);
-    reviewDate.setMonth(monthsAgo);
-    return reviewDate.toLocaleDateString("en-IN", {
-      year: "numeric",
-      month: "short",
-      day: "numeric",
-    });
+
+    // Generate a review date within the past 14 days
+    const daysAgo = (index * 3) % 14;
+    const reviewDate = new Date();
+    reviewDate.setDate(today.getDate() - daysAgo);
+
+    const diffTime = today.getTime() - reviewDate.getTime();
+    const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+
+    if (diffDays <= 7) {
+      return diffDays === 0 ? "Today" : `${diffDays} day${diffDays > 1 ? "s" : ""} ago`;
+    } else {
+      return reviewDate.toLocaleDateString("en-IN", {
+        year: "numeric",
+        month: "short",
+        day: "numeric",
+      });
+    }
   }
+
+
 
 
   function getInitials(name: string) {
@@ -512,17 +531,34 @@ export default function Hero() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service) => (
               <div key={service.id} className="group relative rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+
                 {service.tag && (
-                  <div className="absolute top-4 left-4 bg-white text-pink-600 font-bold px-3 py-1 rounded-full text-xs z-10">
+                  <div className="absolute top-3 left-3 z-20 bg-white text-pink-600 font-bold px-3 py-1 rounded-full text-xs shadow">
                     {service.tag}
                   </div>
                 )}
-                <div className="h-64 overflow-hidden">
+
+                {/* Image section */}
+                <div className="h-64 relative overflow-hidden">
+                  {/* Blurred background */}
                   <img
                     src={service.url}
-                    alt={service.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    alt="background"
+                    className="absolute inset-0 w-full h-full object-cover filter blur-lg scale-110"
                   />
+                  {/* Main image */}
+                  <div className="relative z-10 flex items-center justify-center h-full bg-white/30">
+                    <img
+                      src={service.url}
+                      alt={service.title}
+                      className="max-h-full w-auto object-contain transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
+                </div>
+
+                {/* Content section */}
+                <div className="p-5 bg-white">
+                  {/* Title, description, etc. */}
                 </div>
                 <div className="p-5 bg-white">
                   <h3 className="text-xl font-bold text-gray-900 mb-2">

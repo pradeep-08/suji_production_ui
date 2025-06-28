@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { MessageCircle, X } from "lucide-react";
 
 type Message = {
@@ -143,6 +143,7 @@ const services: Service[] = [
 
 const ChatBot: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [input, setInput] = useState("");
   const [messages, setMessages] = useState<Message[]>([
     {
       sender: "bot",
@@ -150,6 +151,15 @@ const ChatBot: React.FC = () => {
       options: services.map((s) => s.title),
     },
   ]);
+
+  const chatRef = useRef<HTMLDivElement>(null);
+
+  // Scroll to bottom when messages change
+  useEffect(() => {
+    if (chatRef.current) {
+      chatRef.current.scrollTop = chatRef.current.scrollHeight;
+    }
+  }, [messages]);
 
   const handleOptionClick = (option: string) => {
     const selectedService = services.find((s) => s.title === option);
@@ -167,10 +177,24 @@ const ChatBot: React.FC = () => {
     setMessages((prev) => [...prev, userMessage, botReply]);
   };
 
+  const handleInputSend = () => {
+    if (!input.trim()) return;
+
+    const userMessage: Message = { sender: "user", text: input.trim() };
+
+    const botReply: Message = {
+      sender: "bot",
+      text: "Sorry, I can only assist with listed services. Please select a service to view more.",
+    };
+
+    setMessages((prev) => [...prev, userMessage, botReply]);
+    setInput("");
+  };
+
   return (
     <div className="fixed bottom-6 right-6 z-50">
       {isOpen ? (
-        <div className="w-80 h-96 bg-white border border-gray-300 shadow-lg rounded-xl flex flex-col">
+        <div className="w-80 h-[500px] bg-white border border-gray-300 shadow-lg rounded-xl flex flex-col">
           {/* Header */}
           <div className="bg-pink-500 text-white px-4 py-2 rounded-t-xl flex justify-between items-center">
             <span className="font-semibold text-sm">Chat with Suji's Assistant</span>
@@ -180,18 +204,13 @@ const ChatBot: React.FC = () => {
           </div>
 
           {/* Messages */}
-          <div className="flex-1 p-3 overflow-y-auto space-y-3 text-sm text-gray-800">
+          <div ref={chatRef} className="flex-1 p-3 overflow-y-auto space-y-3 text-sm text-gray-800">
             {messages.map((msg, index) => (
-              <div
-                key={index}
-                className={`${msg.sender === "user" ? "text-right" : "text-left"}`}
-              >
-                <div
-                  className={`inline-block whitespace-pre-wrap px-3 py-2 rounded-lg ${msg.sender === "user"
-                    ? "bg-gray-100 text-black"
-                    : "bg-gray-200 text-black"
-                    }`}
-                >
+              <div key={index} className={msg.sender === "user" ? "text-right" : "text-left"}>
+                <div className={`inline-block whitespace-pre-wrap px-3 py-2 rounded-lg ${msg.sender === "user"
+                  ? "bg-gray-100 text-black"
+                  : "bg-gray-200 text-black"
+                  }`}>
                   {msg.text}
                 </div>
 
@@ -225,9 +244,22 @@ const ChatBot: React.FC = () => {
             ))}
           </div>
 
-          {/* Footer Note */}
-          <div className="p-2 text-center text-xs text-gray-500 border-t">
-            Tap a service to learn more
+          {/* Input Box */}
+          <div className="p-2 border-t flex items-center gap-2">
+            <input
+              type="text"
+              className="flex-1 px-3 py-1 text-sm border rounded-lg focus:outline-none"
+              placeholder="Type your message..."
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              onKeyDown={(e) => e.key === "Enter" && handleInputSend()}
+            />
+            <button
+              onClick={handleInputSend}
+              className="bg-pink-500 text-white px-3 py-1 text-xs rounded hover:bg-pink-600 transition"
+            >
+              Send
+            </button>
           </div>
         </div>
       ) : (
