@@ -1,157 +1,210 @@
 import { Helmet } from "react-helmet-async";
-import { useEffect, useMemo } from "react";
+import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Sparkles, CheckCircle, IoLogoWhatsapp } from "react-icons/io";
+import { Check } from "lucide-react";
+import { formatPrice } from "../utils/pricing";
 
 // Image imports
-import newImg1 from "../img/new/1.jpeg";
-import newImg2 from "../img/new/2.jpeg";
-import newImg3 from "../img/new/3.jpeg";
-import newImg4 from "../img/new/4.jpeg";
-import newImg5 from "../img/new/5.jpeg";
-import newImg6 from "../img/new/6.jpeg";
-import newImg7 from "../img/new/7.jpeg";
-import newImg8 from "../img/new/8.jpeg";
-import newImg9 from "../img/new/9.jpeg";
-import newImg10 from "../img/new/10.jpeg";
-import newImg11 from "../img/new/11.jpeg";
-import newImg12 from "../img/new/12.jpeg";
+import newImg1 from "../img/new/1.webp";
+import newImg2 from "../img/new/2.webp";
+import newImg3 from "../img/new/3.webp";
+import newImg4 from "../img/new/4.webp";
+import newImg5 from "../img/new/5.webp";
+import newImg6 from "../img/new/6.webp";
+import newImg7 from "../img/new/7.webp";
+import newImg8 from "../img/new/8.webp";
+import newImg9 from "../img/new/9.webp";
+import newImg10 from "../img/new/10.webp";
+import newImg11 from "../img/new/11.webp";
+import newImg12 from "../img/new/12.webp";
 
-const originalBlocks = [
-  { type: "full", image: newImg10, title: "Air Brush Makeup", description: "Airbrush makeup for a smooth, flawless finish that lasts all day. Ideal for weddings, parties, and special events. Long-lasting, natural-looking and HD-ready." },
-  {
-    type: "half",
-    images: [
-      { url: newImg2, title: "Mugurtham Makeup", description: "Traditional South Indian bridal look customized for auspicious ceremonies with a spiritual touch and cultural essence." },
-      { url: newImg3, title: "Engagement Basic Makeup", description: "Soft and glowing makeup that enhances your engagement day charm while ensuring photo-ready beauty." },
-    ],
-  },
-  { type: "full", image: newImg4, title: "Reception Hairstyle", description: "Timeless hairstyles from elegant buns to modern waves that complete your bridal appearance with grace." },
-  {
-    type: "half",
-    images: [
-      { url: newImg12, title: "Saree Draping", description: "Classic to trendy draping styles for all occasions. Draped with precision for comfort and elegance throughout your day." },
-      { url: newImg6, title: "Professional Makeup", description: "Expert makeup services using premium products to create radiant, flawless finishes that suit your skin tone and outfit." },
-    ],
-  },
-  { type: "full", image: newImg1, title: "Puberty Makeup", description: "Simple, fresh looks for puberty ceremonies that enhance natural features while respecting tradition." },
-  {
-    type: "half",
-    images: [
-      { url: newImg5, title: "Maternity", description: "Capture your glow with maternity-friendly makeup that keeps comfort and beauty in perfect harmony." },
-      { url: newImg7, title: "Pre-Wedding Photoshoot Makeup", description: "Long-lasting, camera-friendly makeup designed to highlight your features in pre-wedding shoots." },
-    ],
-  },
-  { type: "full", image: newImg8, title: "Party Makeup", description: "From cocktail nights to birthday bashes, we craft glamorous looks to match your vibe and dress." },
-  {
-    type: "half",
-    images: [
-      { url: newImg9, title: "Baby Shower", description: "Delicate and radiant makeup for expecting moms. We ensure comfort and beauty go hand in hand." },
-      { url: newImg11, title: "Mehandi Design", description: "Bridal and festive henna art with intricate patterns and deep color that last and impress." },
-    ],
-  },
-];
+export interface ServiceDetail {
+  title: string;
+  category: string;
+  img: string;
+  description: string;
+  price: number;
+  inclusions: string[];
+}
 
-export default function GalleryShowcase() {
+export default function Services() {
   useEffect(() => {
-     window.scrollTo(0, 0);
-    AOS.init({ duration: 1200 });
+    window.scrollTo(0, 0);
+    const timer = setTimeout(() => {
+      AOS.refresh();
+    }, 150);
+    return () => clearTimeout(timer);
   }, []);
 
-  const layoutBlocks = useMemo(() => {
-    const shuffled = [...originalBlocks];
-    for (let i = shuffled.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  const serviceList: ServiceDetail[] = [
+    {
+      title: "Airbrush Bridal Makeup",
+      category: "Premium Bridal",
+      img: newImg10,
+      description: "Ultra sweat-proof, matte, and transfer-resistant silicon makeup applied using state-of-the-art compressor tools. Perfect for long mugurtham events and hot climate sessions.",
+      price: 35000,
+      inclusions: ["Silicon-based Airbrush base", "Luxury 3D silk lashes", "Bridal hairstyle design", "Wedding saree draping", "Jewelry placement helper"]
+    },
+    {
+      title: "Bridal HD Makeup",
+      category: "Signature Bridal",
+      img: newImg9,
+      description: "High-definition camera-friendly bridal makeup designed to hide fine pores and create a seamless dewy finish under heavy studio flash photography.",
+      price: 12000,
+      inclusions: ["HD liquid base application", "Faux lashes placement", "Traditional hair bun/braid styling", "Classic saree draping", "Touch-up assistance guidance"]
+    },
+    {
+      title: "Engagement / Reception Look",
+      category: "Special Occasions",
+      img: newImg3,
+      description: "Fresh, contemporary, and glamorous styling customized to complement modern engagement gowns, lehengas, or designer sarees.",
+      price: 7500,
+      inclusions: ["Custom HD face markup", "Lashes placement", "Modern waves or designer hairstyle", "Saree / Lehenga draping", "Premium setting spray finish"]
+    },
+    {
+      title: "Traditional Saree Draping",
+      category: "Styling Services",
+      img: newImg12,
+      description: "Get your traditional silk saree, kanjeevaram, or reception lehenga draped with clean pleats, pin placements, and total physical comfort.",
+      price: 499,
+      inclusions: ["Ironing checks & pleating", "Classic South Indian folding", "Modern contemporary styles", "Secure safety pinning", "Waistbelt/accessory alignment"]
+    },
+    {
+      title: "Bridal Hairstyling",
+      category: "Hair Artistry",
+      img: newImg6,
+      description: "Traditional jasmine poola jada braids, high floral buns, or elegant half-up styles decorated with gold hair ornaments and matching accessories.",
+      price: 2000,
+      inclusions: ["Hair blow-dry & texturizing", "Extensions setting (if needed)", "Jewelry/accessory securing", "Real or artificial flower styling", "Anti-frizz hair spray lock"]
+    },
+    {
+      title: "Party / Guest Styling",
+      category: "Party Looks",
+      img: newImg8,
+      description: "Elegant makeup and styling services for bridesmaids, mothers of the bride, baby showers, or birthday party celebrations.",
+      price: 5000,
+      inclusions: ["Standard party makeup", "Quick hair curls or blowdry", "Saree draping assistance", "Lightweight long-stay finish"]
     }
-    return shuffled;
-  }, []);
+  ];
 
   return (
     <>
       <Helmet>
         <title>Bridal Makeup, Mehandi & Saree Draping Services in Chennai</title>
-        <meta name="description" content="Explore our bridal services including HD makeup, waterproof makeup, traditional mehandi, and expert saree draping for weddings and events." />
+        <meta name="description" content="Explore our premium bridal services including Ultra HD makeup, waterproof airbrush makeup, mehandi, and expert saree draping in Chennai by Suji." />
         <meta name="keywords" content="bridal makeup services Chennai, waterproof bridal makeup, traditional mehandi Chennai, saree draping Chennai, party makeup" />
-        <link rel="canonical" href="https://sujihairandmakeup.com/services" />
-        <script type="application/ld+json">{`
-    {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "name": "Services",
-      "url": "https://sujihairandmakeup.com/services",
-      "breadcrumb": {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://sujihairandmakeup.com"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Services",
-            "item": "https://sujihairandmakeup.com/services"
-          }
-        ]
-      }
-    }
-  `}</script>
+        <link rel="canonical" href="https://sujihairandmakeup.in/services" />
       </Helmet>
 
-      <div className="text-center pt-[100px] px-4 mb-16">
-        <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-          Our Services
-        </h1>
-        <p className="text-gray-600 max-w-2xl mx-auto text-base sm:text-lg">
-          We offer a range of professional beauty services to make you look and feel your best on your special day.
-        </p>
+      {/* Page Header */}
+      <div className="bg-bridal-bg text-bridal-brown pt-32 pb-16 px-4 text-center">
+        <div className="max-w-3xl mx-auto" data-aos="fade-up">
+          <span className="text-bridal-rose text-xs font-bold uppercase tracking-widest bg-bridal-blush/40 px-3.5 py-1 rounded-full">
+            Our Offerings
+          </span>
+          <h1 className="text-4xl sm:text-5xl font-playfair font-bold text-gray-900 mt-4 mb-4">
+            Professional Bridal & Beauty Services
+          </h1>
+          <p className="text-gray-600 max-w-xl mx-auto text-sm sm:text-base leading-relaxed">
+            Crafting elegant, custom looks that emphasize your natural beauty for weddings, engagements, receptions, and parties in Chennai.
+          </p>
+        </div>
       </div>
 
-      <div className="w-full">
-        {layoutBlocks.map((block, idx) =>
-          block.type === "full" ? (
-            <a
-              href="/contact"
-              key={idx}
-              className="group relative h-[70vh] block overflow-hidden"
-              data-aos="fade-up"
-            >
-              <img src={block.image} alt={block.title} className="w-full h-full object-cover group-hover:blur-sm transition duration-700" />
-              <div className="absolute inset-0 bg-black/30 group-hover:bg-black/60 transition" />
-              <div className="absolute z-10 inset-y-0 left-6 flex flex-col justify-center text-white">
-                <h2 className="text-2xl sm:text-4xl font-bold uppercase">{block.title}</h2>
-                <p className="mt-2 max-w-xl text-sm sm:text-base opacity-0 group-hover:opacity-100 transition duration-500">{block.description}</p>
-              </div>
-              <div className="absolute right-6 top-1/2 transform -translate-y-1/2 bg-white text-black p-2 sm:p-3 rounded-full opacity-0 group-hover:opacity-100 transition">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 sm:h-6 sm:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </div>
-            </a>
-          ) : (
-            <div key={idx} className="grid grid-cols-1 sm:grid-cols-2">
-              {(block.images || []).map((img, subIdx) => (
-                <a href="/contact" key={subIdx} className="group relative h-[60vh] block overflow-hidden" data-aos="fade-up">
-                  <img src={img.url} alt={img.title} className="w-full h-full object-cover group-hover:blur-sm transition duration-700" />
-                  <div className="absolute inset-0 bg-black/30 group-hover:bg-black/60 transition" />
-                  <div className="absolute z-10 inset-y-0 left-6 flex flex-col justify-center text-white">
-                    <h2 className="text-xl sm:text-2xl font-bold uppercase">{img.title}</h2>
-                    <p className="mt-1 max-w-md text-sm opacity-0 group-hover:opacity-100 transition duration-500">{img.description}</p>
+      {/* Services Grid */}
+      <section className="bg-white py-20 px-4 sm:px-6 text-bridal-brown">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {serviceList.map((service, idx) => (
+              <div
+                key={idx}
+                className="bg-bridal-bg rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 border border-bridal-champagne/10 flex flex-col justify-between h-full"
+                data-aos="fade-up"
+                data-aos-delay={idx * 100}
+              >
+                <div>
+                  {/* Service Image */}
+                  <div className="h-60 overflow-hidden relative">
+                    <img
+                      src={service.img}
+                      alt={service.title}
+                      className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500"
+                    />
+                    <span className="absolute top-4 left-4 bg-white/95 text-bridal-rose text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-sm">
+                      {service.category}
+                    </span>
                   </div>
-                  <div className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white text-black p-2 rounded-full opacity-0 group-hover:opacity-100 transition">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
+
+                  {/* Service Content */}
+                  <div className="p-6">
+                    <div className="flex justify-between items-baseline mb-3">
+                      <h3 className="text-lg font-playfair font-bold text-gray-900">{service.title}</h3>
+                    </div>
+                    <p className="text-gray-600 text-xs sm:text-sm leading-relaxed mb-6">
+                      {service.description}
+                    </p>
+
+                    <div className="border-t border-bridal-champagne/20 my-4" />
+
+                    <h4 className="text-xs font-bold uppercase tracking-widest text-gray-800 mb-3">What's Included:</h4>
+                    <ul className="space-y-2 mb-6">
+                      {service.inclusions.map((inclusion, itemIdx) => (
+                        <li key={itemIdx} className="flex items-center gap-2 text-xs text-gray-600">
+                          <Check size={14} className="text-bridal-rose flex-shrink-0" />
+                          <span>{inclusion}</span>
+                        </li>
+                      ))}
+                    </ul>
                   </div>
-                </a>
-              ))}
-            </div>
-          )
-        )}
-      </div>
+                </div>
+
+                {/* Actions */}
+                <div className="px-6 pb-6 pt-2">
+                  <div className="flex items-baseline gap-1 mb-4">
+                    <span className="text-[10px] text-gray-400 font-semibold uppercase">Starting from</span>
+                    <span className="text-xl font-bold font-playfair text-gray-900">{formatPrice(service.price)}</span>
+                  </div>
+                  <div className="flex gap-3">
+                    <a
+                      href={`https://wa.me/917305931283?text=Hi Suji, I would like to inquire about the ${encodeURIComponent(service.title)} service.`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 inline-flex items-center justify-center gap-1.5 bg-green-500 hover:bg-green-600 text-white font-bold text-[10px] uppercase tracking-wider py-2.5 px-4 rounded-full transition"
+                    >
+                      <IoLogoWhatsapp size={14} />
+                      <span>WhatsApp Inquiry</span>
+                    </a>
+                    <a
+                      href={`/contact?service=${encodeURIComponent(service.title)}`}
+                      className="flex-1 inline-flex items-center justify-center bg-bridal-rose hover:bg-bridal-brown text-white font-bold text-[10px] uppercase tracking-wider py-2.5 px-4 rounded-full transition"
+                    >
+                      <span>Book Now</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Custom Quote Request banner */}
+      <section className="bg-bridal-bg py-16 px-4 sm:px-6 text-center text-bridal-brown">
+        <div className="max-w-3xl mx-auto" data-aos="fade-up">
+          <h3 className="text-2xl sm:text-3xl font-playfair font-bold text-gray-900 mb-3">Looking for a Customized Bridal Combo?</h3>
+          <p className="text-gray-600 text-xs sm:text-sm max-w-md mx-auto mb-6">
+            We provide specialized discounted packages when booking multiple services together (e.g., Mugurtham + Reception + Saree Draping + Groom Touchup).
+          </p>
+          <a
+            href="/contact"
+            className="inline-flex bg-bridal-brown hover:bg-bridal-rose text-white font-bold text-xs uppercase tracking-wider px-8 py-3.5 rounded-full shadow-md transition"
+          >
+            Request Custom Quote
+          </a>
+        </div>
+      </section>
     </>
   );
 }

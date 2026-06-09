@@ -18,7 +18,7 @@ if (!existsSync(outputDir)) {
 const sitemapPath = path.join(outputDir, "sitemap.xml");
 const robotsPath = path.join(outputDir, "robots.txt");
 
-const hostname = "https://sujihairandmakeup.com";
+const hostname = "https://sujihairandmakeup.in";
 
 // Define your site pages
 const pages = [
@@ -27,6 +27,14 @@ const pages = [
   { url: "/gallery", changefreq: "daily", priority: 0.8 },
   { url: "/services", changefreq: "daily", priority: 0.8 },
   { url: "/contact", changefreq: "daily", priority: 0.5 },
+  { url: "/bridal-makeup-artist-chennai", changefreq: "weekly", priority: 0.9 },
+  { url: "/hd-bridal-makeup-chennai", changefreq: "weekly", priority: 0.9 },
+  { url: "/airbrush-makeup-chennai", changefreq: "weekly", priority: 0.9 },
+  { url: "/engagement-makeup-chennai", changefreq: "weekly", priority: 0.9 },
+  { url: "/reception-makeup-chennai", changefreq: "weekly", priority: 0.9 },
+  { url: "/party-makeup-artist-chennai", changefreq: "weekly", priority: 0.9 },
+  { url: "/hairstyling-saree-draping-chennai", changefreq: "weekly", priority: 0.9 },
+  { url: "/home-service-bridal-makeup-chennai", changefreq: "weekly", priority: 0.9 },
 ];
 
 (async () => {

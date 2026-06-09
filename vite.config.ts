@@ -5,7 +5,4 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   plugins: [react()],
   // base: "/suji_production_ui",
-  optimizeDeps: {
-    exclude: ["lucide-react"],
-  },
 });

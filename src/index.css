@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+  width: 100%;
+  scroll-behavior: smooth;
+}
+
 
 .icons{
     padding-top: 10px;

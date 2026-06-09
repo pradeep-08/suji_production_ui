@@ -6,7 +6,15 @@ import HomeContainer from "./container/HomeContainer";
 
 function App() {
   useEffect(() => {
-    AOS.init({ duration: 2000 });
+    // Delay AOS initialization to allow initial paint and prevent forced reflow
+    const timer = setTimeout(() => {
+      AOS.init({ 
+        duration: 1000, 
+        once: true,
+        disable: 'mobile' // Scroll animations on mobile can trigger layout reflows/lag
+      });
+    }, 150);
+    return () => clearTimeout(timer);
   }, []);
 
   return (

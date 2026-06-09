@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sujihairandmakeup.com/sitemap.xml
-Host: https://sujihairandmakeup.com
+Sitemap: https://sujihairandmakeup.in/sitemap.xml
+Host: https://sujihairandmakeup.in
