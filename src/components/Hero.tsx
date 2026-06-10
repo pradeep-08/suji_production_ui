@@ -180,7 +180,7 @@ export default function Hero() {
   return (
     <>
       <Helmet>
-        <title>Bridal Makeup Artist in Chennai | Suji Hair & Makeup</title>
+        <title>Top Bridal Makeup Artist & Saree Draping in Chennai | Suji Hair & Makeup</title>
         <meta name="description" content="Book professional bridal makeup, HD makeup, engagement makeup, hairstyling, and saree draping services in Chennai. Elegant bridal looks by Suji Hair & Makeup." />
         <meta name="keywords" content="bridal makeup artist in Chennai, best bridal makeup artist in Chennai, HD bridal makeup Chennai, airbrush makeup artist Chennai, engagement makeup artist Chennai, reception makeup Chennai, party makeup artist Chennai, saree draping and hairstyling Chennai, home service bridal makeup Chennai" />
       </Helmet>
@@ -191,13 +191,15 @@ export default function Hero() {
           <img
             src={hero}
             alt="Beautiful South Indian Bride"
+            width="1920"
+            height="1080"
             className="w-full h-full object-cover object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-bridal-brown/85 via-bridal-brown/50 to-transparent" />
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 z-10 w-full text-white">
-          <div className="max-w-2xl" data-aos="fade-right">
+          <div className="max-w-2xl">
             <span className="inline-flex items-center gap-2 bg-bridal-champagne/20 text-bridal-champagne border border-bridal-champagne/30 px-3.5 py-1 rounded-full text-xs font-semibold uppercase tracking-wider mb-6 backdrop-blur-sm">
               <Sparkles size={12} className="animate-spin" />
               <span>Chennai's Premier Bridal Artist</span>
@@ -235,7 +237,7 @@ export default function Hero() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-bridal-champagne/20">
             {trustStats.map((stat, idx) => (
-              <div key={idx} className="flex flex-col justify-center items-center px-4" data-aos="fade-up" data-aos-delay={idx * 100}>
+              <div key={idx} className="flex flex-col justify-center items-center px-4">
                 <span className="text-3xl sm:text-4xl font-playfair font-bold text-bridal-champagne mb-1">{stat.value}</span>
                 <span className="text-xs sm:text-sm text-bridal-blush/80 uppercase tracking-widest font-medium">{stat.label}</span>
               </div>
