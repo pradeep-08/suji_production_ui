@@ -15,3 +15,13 @@ body {
     padding-top: 10px;
     font-size: 20px;   
 }
+
+/* Force show all AOS animated elements on mobile to prevent content hidden issues */
+@media (max-w: 768px) {
+  [data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    pointer-events: auto !important;
+  }
+}
