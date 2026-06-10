@@ -10,8 +10,7 @@ function App() {
     const timer = setTimeout(() => {
       AOS.init({ 
         duration: 1000, 
-        once: true,
-        disable: 'mobile' // Scroll animations on mobile can trigger layout reflows/lag
+        once: true
       });
     }, 150);
     return () => clearTimeout(timer);
