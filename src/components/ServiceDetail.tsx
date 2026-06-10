@@ -352,7 +352,7 @@ export default function ServiceDetail() {
         <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center z-10">
           <span className="inline-flex items-center gap-1.5 bg-bridal-champagne/20 text-bridal-champagne border border-bridal-champagne/30 px-3.5 py-1 rounded-full text-xs font-semibold uppercase tracking-wider mb-6">
             <Sparkles size={12} className="animate-spin" />
-            <span>Chennai Local SEO Verified Service</span>
+            <span>Premium Bridal Styling • Chennai</span>
           </span>
           <h1 className="text-3xl sm:text-5xl font-playfair font-bold leading-tight mb-4 text-white">
             {data.h1}

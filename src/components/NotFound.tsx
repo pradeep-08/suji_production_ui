@@ -6,6 +6,7 @@ export default function NotFound() {
   const [countdown, setCountdown] = useState(60); // Start from 60 seconds
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     const interval = setInterval(() => {
       setCountdown((prev) => prev - 1);
     }, 1000);
@@ -36,10 +37,8 @@ export default function NotFound() {
         >
           ← Go back
         </button>
-        <Link to="/">
-          <button className="px-4 py-2 rounded-md bg-black text-white hover:bg-gray-800">
-            Take me home
-          </button>
+        <Link to="/" className="px-4 py-2 rounded-md bg-black text-white hover:bg-gray-800">
+          Take me home
         </Link>
       </div>
     </div>
