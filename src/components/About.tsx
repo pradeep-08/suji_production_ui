@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 import { Award, ShieldCheck, Heart, Sparkles, MapPin, CheckCircle } from "lucide-react";
 import aboutCert from "../img/About/About2.webp";
 import aboutHero from "../img/About/image.webp";
@@ -141,12 +142,12 @@ export default function About() {
           <p className="text-gray-600 text-xs sm:text-sm max-w-md mx-auto mb-6">
             Ensure your dates are locked in with Chennai's trusted bridal artist. Connect with us to check package rates.
           </p>
-          <a
-            href="/contact"
+          <Link
+            to="/contact"
             className="inline-flex bg-bridal-rose hover:bg-bridal-brown text-white font-bold text-xs uppercase tracking-wider px-8 py-3.5 rounded-full shadow-md transition"
           >
             Inquire Bridal Availability
-          </a>
+          </Link>
         </div>
       </section>
     </>

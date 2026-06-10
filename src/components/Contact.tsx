@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import { Phone, Mail, MapPin, CheckCircle } from "lucide-react";
 import AOS from "aos";
 import { Helmet } from "react-helmet-async";
@@ -192,7 +192,7 @@ export default function Contact() {
                 
                 <div className="flex items-start space-x-2 text-xs text-gray-500 pt-2">
                   <input type="checkbox" required className="mt-0.5 accent-bridal-rose rounded" />
-                  <p>I agree to the friendly <a href="/privacy" className="text-bridal-rose underline hover:text-bridal-brown">privacy policy</a> guidelines.</p>
+                  <p>I agree to the friendly <Link to="/privacy" className="text-bridal-rose underline hover:text-bridal-brown">privacy policy</Link> guidelines.</p>
                 </div>
                 
                 <button type="submit" className="w-full bg-bridal-rose hover:bg-bridal-brown text-white font-bold text-xs uppercase tracking-wider py-4 px-6 rounded-full shadow-md transition active:scale-98">

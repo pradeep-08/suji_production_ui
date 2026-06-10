@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import AOS from "aos";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 import "aos/dist/aos.css";
 import { ArrowRight, X, Heart } from "lucide-react";
 
@@ -164,12 +165,12 @@ export default function Gallery() {
           <p className="text-gray-600 text-xs sm:text-sm max-w-md mx-auto mb-6">
             Get in touch to check if Suji is available for your wedding date. Let's design your perfect bridal look.
           </p>
-          <a
-            href="/contact"
+          <Link
+            to="/contact"
             className="inline-flex bg-bridal-rose hover:bg-bridal-brown text-white font-bold text-xs uppercase tracking-wider px-8 py-3.5 rounded-full shadow-md transition"
           >
             Check My Wedding Date
-          </a>
+          </Link>
         </div>
       </section>
     </>

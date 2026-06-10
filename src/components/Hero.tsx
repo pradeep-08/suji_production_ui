@@ -273,13 +273,13 @@ export default function Hero() {
           </div>
 
           <div className="text-center mt-12">
-            <a
-              href="/gallery"
+            <Link
+              to="/gallery"
               className="inline-flex items-center gap-2 text-bridal-rose hover:text-bridal-brown font-semibold tracking-wider transition-all duration-300 hover:gap-3"
             >
               <span>View Full Gallery Portfolio</span>
               <ArrowRight size={16} />
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -331,12 +331,12 @@ export default function Hero() {
                         <ArrowRight size={12} />
                       </Link>
                     ) : (
-                      <a
-                        href={`/contact?service=${encodeURIComponent(service.title)}`}
+                      <Link
+                        to={`/contact?service=${encodeURIComponent(service.title)}`}
                         className="flex-1 inline-flex items-center justify-center gap-1 bg-bridal-rose hover:bg-bridal-brown text-white font-semibold text-xs uppercase tracking-wider py-2 px-4 rounded-full transition"
                       >
                         <span>Book Now</span>
-                      </a>
+                      </Link>
                     )}
                   </div>
                 </div>

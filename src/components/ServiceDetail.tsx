@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useLocation } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { Sparkles, ArrowRight, Star, ShieldCheck, Award, Phone, Mail, MapPin } from "lucide-react";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { formatPrice } from "../utils/pricing";
@@ -303,9 +305,21 @@ const servicesContent: Record<string, ServiceData> = {
 
 export default function ServiceDetail() {
   const { serviceSlug } = useParams<{ serviceSlug: string }>();
+  const { pathname } = useLocation();
   const [activeFAQ, setActiveFAQ] = useState<number | null>(null);
 
-  const data = serviceSlug ? servicesContent[serviceSlug] : null;
+  // Extract the slug from the pathname to support both route patterns (dynamic parameter or static route path)
+  const slug = serviceSlug || pathname.replace(/^\/|\/$/g, "");
+  const data = slug ? servicesContent[slug] : null;
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    setActiveFAQ(null);
+    const timer = setTimeout(() => {
+      AOS.refresh();
+    }, 150);
+    return () => clearTimeout(timer);
+  }, [pathname]);
 
   if (!data) {
     return (
@@ -325,7 +339,7 @@ export default function ServiceDetail() {
         <title>{data.title}</title>
         <meta name="description" content={data.description} />
         <meta name="keywords" content={data.keywords} />
-        <link rel="canonical" href={`https://sujihairandmakeup.in/${serviceSlug}`} />
+        <link rel="canonical" href={`https://sujihairandmakeup.in/${slug}`} />
       </Helmet>
 
       {/* Hero Header */}
@@ -478,7 +492,7 @@ export default function ServiceDetail() {
             <h4 className="text-xs font-bold uppercase tracking-widest text-gray-400 mb-4">Other Bridal Styling Services</h4>
             <div className="flex flex-wrap justify-center gap-3">
               {Object.keys(servicesContent)
-                .filter((key) => key !== serviceSlug)
+                .filter((key) => key !== slug)
                 .map((key) => (
                   <Link
                     key={key}

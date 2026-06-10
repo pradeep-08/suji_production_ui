@@ -1,8 +1,9 @@
 import { Helmet } from "react-helmet-async";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { Sparkles, CheckCircle, IoLogoWhatsapp } from "react-icons/io";
+import { IoLogoWhatsapp } from "react-icons/io";
 import { Check } from "lucide-react";
 import { formatPrice } from "../utils/pricing";
 
@@ -176,12 +177,12 @@ export default function Services() {
                       <IoLogoWhatsapp size={14} />
                       <span>WhatsApp Inquiry</span>
                     </a>
-                    <a
-                      href={`/contact?service=${encodeURIComponent(service.title)}`}
+                    <Link
+                      to={`/contact?service=${encodeURIComponent(service.title)}`}
                       className="flex-1 inline-flex items-center justify-center bg-bridal-rose hover:bg-bridal-brown text-white font-bold text-[10px] uppercase tracking-wider py-2.5 px-4 rounded-full transition"
                     >
                       <span>Book Now</span>
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -197,12 +198,12 @@ export default function Services() {
           <p className="text-gray-600 text-xs sm:text-sm max-w-md mx-auto mb-6">
             We provide specialized discounted packages when booking multiple services together (e.g., Mugurtham + Reception + Saree Draping + Groom Touchup).
           </p>
-          <a
-            href="/contact"
+          <Link
+            to="/contact"
             className="inline-flex bg-bridal-brown hover:bg-bridal-rose text-white font-bold text-xs uppercase tracking-wider px-8 py-3.5 rounded-full shadow-md transition"
           >
             Request Custom Quote
-          </a>
+          </Link>
         </div>
       </section>
     </>

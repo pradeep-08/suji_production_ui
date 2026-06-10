@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import { MessageCircle, X } from "lucide-react";
 import { formatPrice } from "../utils/pricing";
 
@@ -227,12 +228,12 @@ const ChatBot: React.FC = () => {
                 {/* Contact CTA */}
                 {msg.contactService && (
                   <div className="mt-3">
-                    <a
-                      href={`/contact?service=${encodeURIComponent(msg.contactService)}`}
+                    <Link
+                      to={`/contact?service=${encodeURIComponent(msg.contactService)}`}
                       className="inline-block text-[10px] font-bold uppercase tracking-wider bg-bridal-brown hover:bg-bridal-rose text-white px-4 py-2 rounded-full transition shadow-xs"
                     >
                       Book this Look
-                    </a>
+                    </Link>
                   </div>
                 )}
               </div>
